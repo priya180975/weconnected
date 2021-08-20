@@ -1,0 +1,85 @@
+@import url("https://fonts.googleapis.com/css2?family=Spartan:wght@300&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: 'Spartan', sans-serif;
+}
+
+body .btn {
+  background: none;
+  border: none;
+  outline: none;
+}
+
+nav {
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+  height: 6.1vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #FCFCFC;
+  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+nav #logo-div {
+  margin-left: 1rem;
+}
+
+nav #logo-div #logo {
+  width: 50%;
+}
+
+nav #nav-icons {
+  margin-right: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 10%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+nav #drop-down-menu-items {
+  display: none;
+  position: absolute;
+  background: #FCFCFC;
+  padding: 1rem 0;
+  right: 0;
+  width: 70%;
+  overflow: hidden;
+  height: 100vh;
+  top: 6.5vh;
+}
+
+nav #drop-down-menu-items .drop-down-menu-item {
+  padding: 1rem 2rem;
+}
+
+nav #drop-down-menu-items .drop-down-menu-item i {
+  margin-right: 1rem;
+}
+
+nav #drop-down-menu-items .drop-down-menu-item a {
+  color: #000;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 0.8rem;
+}
+
+nav #drop-down-menu-items .drop-down-menu-item:hover {
+  background: rgba(5, 255, 0, 0.14);
+}
+/*# sourceMappingURL=mainstyle.css.map */
