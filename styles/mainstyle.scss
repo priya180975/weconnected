@@ -52,17 +52,18 @@ nav{
 
     //add javascript
     .all{
-        display:none;
+       display:none;
     }
     .drop-down-menu-items{
+        overflow-y:scroll;
         position: absolute;
         background:$grey-back;
         padding: 1rem 0;
         right: 0;
         width: 70%;
-        overflow: hidden;
         height: 100vh;
-        top:10.5vh;
+        top:10.2vh;
+        padding-bottom: 10rem;
 
         .drop-down-menu-item{
             i{
@@ -75,11 +76,34 @@ nav{
                 text-decoration: none;
                 font-size: 0.8rem;
             }
+            #filter{
+                width:100%;
+                text-align: left;
+                font-family: 'Spartan', sans-serif;
+                font-weight: bold;
+                font-size: 0.8rem;
+            }
         }
 
+        .filter-options{
+            div{
+                margin:1rem 0;
+                font-size: 0.8rem;
+                font-weight: bold;
+                input{
+                    margin-right: 1rem;
+                }
+            }
+        }
         .drop-down-menu-item:hover{
             background: rgba(5, 255, 0, 0.14);
         }
+
+        .filter-options:hover{
+            background: none;
+        }
+
+        
     }
 }
 
