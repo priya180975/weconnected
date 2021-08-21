@@ -51,8 +51,10 @@ nav{
     }
 
     //add javascript
-    #drop-down-menu-items{
-        display: none;
+    .all{
+        display:none;
+    }
+    .drop-down-menu-items{
         position: absolute;
         background:$grey-back;
         padding: 1rem 0;

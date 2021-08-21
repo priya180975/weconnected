@@ -57,8 +57,11 @@ nav #nav-icons #home-page-icon {
   margin-right: 1rem;
 }
 
-nav #drop-down-menu-items {
+nav .all {
   display: none;
+}
+
+nav .drop-down-menu-items {
   position: absolute;
   background: #FCFCFC;
   padding: 1rem 0;
@@ -69,22 +72,22 @@ nav #drop-down-menu-items {
   top: 10.5vh;
 }
 
-nav #drop-down-menu-items .drop-down-menu-item {
+nav .drop-down-menu-items .drop-down-menu-item {
   padding: 1rem 2rem;
 }
 
-nav #drop-down-menu-items .drop-down-menu-item i {
+nav .drop-down-menu-items .drop-down-menu-item i {
   margin-right: 1rem;
 }
 
-nav #drop-down-menu-items .drop-down-menu-item a {
+nav .drop-down-menu-items .drop-down-menu-item a {
   color: #000;
   font-weight: bold;
   text-decoration: none;
   font-size: 0.8rem;
 }
 
-nav #drop-down-menu-items .drop-down-menu-item:hover {
+nav .drop-down-menu-items .drop-down-menu-item:hover {
   background: rgba(5, 255, 0, 0.14);
 }
 
