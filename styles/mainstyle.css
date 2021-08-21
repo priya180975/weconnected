@@ -96,6 +96,10 @@ nav .drop-down-menu-items .drop-down-menu-item #filter {
   font-size: 0.8rem;
 }
 
+nav .drop-down-menu-items .filter-options {
+  padding-bottom: 2rem;
+}
+
 nav .drop-down-menu-items .filter-options div {
   margin: 1rem 0;
   font-size: 0.8rem;
