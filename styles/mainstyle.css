@@ -6,6 +6,7 @@
 
 body {
   font-family: 'Spartan', sans-serif;
+  background: #F8F8FB;
 }
 
 body .btn {
@@ -18,7 +19,7 @@ nav {
   position: fixed;
   width: 100%;
   z-index: 1;
-  height: 6.1vh;
+  height: 10vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -29,8 +30,8 @@ nav {
       -ms-flex-align: center;
           align-items: center;
   background: #FCFCFC;
-  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  -webkit-box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
 }
 
 nav #logo-div {
@@ -42,7 +43,7 @@ nav #logo-div #logo {
 }
 
 nav #nav-icons {
-  margin-right: 1rem;
+  margin-right: 2rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -50,6 +51,10 @@ nav #nav-icons {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+
+nav #nav-icons #home-page-icon {
+  margin-right: 1rem;
 }
 
 nav #drop-down-menu-items {
@@ -61,7 +66,7 @@ nav #drop-down-menu-items {
   width: 70%;
   overflow: hidden;
   height: 100vh;
-  top: 6.5vh;
+  top: 10.5vh;
 }
 
 nav #drop-down-menu-items .drop-down-menu-item {
@@ -81,5 +86,188 @@ nav #drop-down-menu-items .drop-down-menu-item a {
 
 nav #drop-down-menu-items .drop-down-menu-item:hover {
   background: rgba(5, 255, 0, 0.14);
+}
+
+main {
+  position: relative;
+  top: 13vh;
+}
+
+main #profile-info-display {
+  position: relative;
+  background: #EDF1FF;
+  border-radius: 1rem;
+}
+
+main #profile-info-display .black {
+  padding: 1.5rem;
+  background-color: #212121;
+  border-radius: 1rem 1rem 0 0;
+}
+
+main #profile-info-display .centered {
+  position: relative;
+  text-align: center;
+  top: -1.8rem;
+}
+
+main #profile-info-display .centered img {
+  border: 2px solid #EDF1FF;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+
+main #profile-info-display .centered .profile-info {
+  margin-top: 0.5rem;
+  font-size: 0.7rem;
+  font-weight: bold;
+}
+
+main #profile-info-display .centered .profile-info .name {
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+main #profile-info-display .centered .profile-info .course-student {
+  text-align: left;
+  margin: 0 auto;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  margin-top: 0.5rem;
+}
+
+main #profile-info-display .centered #post-btn-div {
+  margin-top: 0.5rem;
+}
+
+main #profile-info-display .centered #post-btn-div #post-btn {
+  background: #000;
+  padding: 0.6rem 1.1rem;
+  color: white;
+  font-family: 'Spartan', sans-serif;
+  border-radius: 2rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+main #profile-info-display .centered #post-btn-div #post-btn i {
+  margin-right: 0.5rem;
+  padding: 0.1rem;
+  border-radius: 50%;
+  border: 2px solid #fff;
+}
+
+main #content-all {
+  position: relative;
+  margin-top: 1rem;
+}
+
+main #content-all .content {
+  margin-bottom: 1rem;
+  border-radius: 1rem;
+  background: white;
+}
+
+main #content-all .content .content-padding {
+  padding: 1.3rem 1rem;
+}
+
+main #content-all .content .content-heading {
+  font-size: 1rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+main #content-all .content .content-profile-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 0.6rem;
+  margin-bottom: 0.6rem;
+}
+
+main #content-all .content .content-profile-info .content-profile-pic-name {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main #content-all .content .content-profile-info .content-profile-pic-name .content-profile-pic {
+  margin-right: 1rem;
+}
+
+main #content-all .content .content-profile-info .content-profile-pic-name .content-profile-pic img {
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
+}
+
+main #content-all .content .content-profile-info .content-profile-pic-name .content-profile-name {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+main #content-all .content .content-profile-info .content-tag {
+  background: rgba(255, 143, 0, 0.2);
+  padding: 0.5rem 1rem;
+}
+
+main #content-all .content .content-text {
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+main #content-all .content .content-interact {
+  background: #212121;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0.7rem 1.5rem;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border-radius: 0 0 1rem 1rem;
+  color: #fff;
+  font-size: 0.8rem;
+}
+
+main #content-all .content .content-interact i {
+  color: white;
+}
+
+main #content-all .content .content-interact .content-interact-comment {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+main #content-all .content .content-interact .content-interact-comment .comment {
+  margin-right: 0.5rem;
+}
+
+main #content-all .content .content-interact .content-interact-comment .show {
+  padding: 0.5rem;
+  background: #7CF9687D;
+  border-radius: 50%;
+}
+
+main #content-all .content .content-interact .content-interact-comment .show-no {
+  background: #F968687D;
 }
 /*# sourceMappingURL=mainstyle.css.map */
