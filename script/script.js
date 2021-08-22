@@ -31,6 +31,8 @@ postBtn.addEventListener("click",addpost);
 cancelPost.addEventListener("click",addpost);
 successPost.addEventListener("click",addpost);
 
+postTemplate.addEventListener("click",postTemplateTop)
+
 function addpost()
 {
     postTemplate.classList.toggle("all");
@@ -38,3 +40,9 @@ function addpost()
     body.classList.toggle("overflow");
     window.scrollTo(0,0)
 }
+
+function postTemplateTop()
+{
+    postTemplate.style.top="0rem";
+}
+
