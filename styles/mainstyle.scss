@@ -1,6 +1,7 @@
 *{
     padding: 0;
     margin: 0;
+    box-sizing: border-box
 }
 @import url('https://fonts.googleapis.com/css2?family=Spartan:wght@300&display=swap');
 
@@ -10,15 +11,26 @@ $grey-back:#FCFCFC;
 $black-aes:#212121;
 $grey-very-light:#F8F8FB;
 
+.overflow{
+    overflow:hidden;
+}
 
 body{
     font-family: 'Spartan', sans-serif;
     background: $grey-very-light;
-    // overflow: scroll;
     .btn{
         background: none;
         border: none;
         outline: none;
+    }
+    
+    .all{
+        display:none;
+    }
+
+    .opacity{
+        opacity: 0.2;
+        pointer-events: none;
     }
 }
 
@@ -51,11 +63,9 @@ nav{
     }
 
     //add javascript
-    .all{
-       display:none;
-    }
+  
     .drop-down-menu-items{
-        overflow-y:scroll;
+        overflow:scroll;
         position: absolute;
         background:$grey-back;
         padding: 1rem 0;
@@ -63,7 +73,6 @@ nav{
         width: 70%;
         height: 100vh;
         top:10.2vh;
-        padding-bottom: 10rem;
 
         .drop-down-menu-item{
             i{
@@ -86,7 +95,8 @@ nav{
         }
 
         .filter-options{
-            padding-bottom: 2rem;
+            margin-bottom: 5rem;
+            overflow:scroll;
             div{
                 margin:1rem 0;
                 font-size: 0.8rem;
@@ -103,8 +113,6 @@ nav{
         .filter-options:hover{
             background: none;
         }
-
-        
     }
 }
 
@@ -174,93 +182,138 @@ main{
     #content-all{
         position: relative;
         margin-top: 1rem;
-        
-        .content{
-            margin-bottom: 1rem;
-            border-radius: 1rem;
-            background: white;
+    }
+}
 
-            .content-padding{
-                padding: 1.3rem 1rem;
-            }
+.temp{
+    margin-bottom: 1rem;
+    border-radius: 1rem;
+    background: white;
 
-            .content-heading{
-                font-size: 1rem;
-                font-weight: bold;
-                margin-bottom: 0.5rem;
-            }
+    .content-padding{
+        padding: 1.3rem 1rem;
+    }
 
-            .content-profile-info{
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                font-size: 0.6rem;
-                margin-bottom: 0.6rem;
+    .content-heading{
+        font-size: 1rem;
+        font-weight: bold;
+        margin-bottom: 0.5rem;
+    }
 
-                .content-profile-pic-name{
-                    display: flex;
-                    align-items: center;
-                    
+    .content-profile-info{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 0.6rem;
+        margin-bottom: 0.6rem;
 
-                    .content-profile-pic{
-                        img{
-                            width: 50px;
-                            height: 50px;
-                            border-radius: 10px;
-                        }
-                        margin-right: 1rem;
-                    }
-
-                    .content-profile-name{
-                        display: flex;
-                        flex-direction: column;
-                    }
-                }
-
-                .content-tag{
-                    background: rgba(255, 143, 0, 0.2);
-                    padding: 0.5rem 1rem;
-                }
-            }
-
-            .content-text{
-                font-size: 0.8rem;
-                font-weight: bold;
-            }
+        .content-profile-pic-name{
+            display: flex;
+            align-items: center;
             
-            .content-interact{
-                background: $black-aes;
-                display: flex;
-                padding: 0.7rem 1.5rem;
-                justify-content: space-between;
-                border-radius: 0 0 1rem 1rem;
-                color: #fff;
-                font-size: 0.8rem;
 
-                i{
-                    color: white;
+            .content-profile-pic{
+                img{
+                    width: 50px;
+                    height: 50px;
+                    border-radius: 10px;
                 }
-                
-                .content-interact-comment{
-                    display: flex;
-                    .comment{
-                        margin-right: 0.5rem;
-                    }
-                    .show{
-                        padding: 0.5rem;
-                        background: #7CF9687D;
-                        border-radius: 50%;
-                    }
-                    .show-no{
-                        background: #F968687D;
-                    }
-                }
-
-                
+                margin-right: 1rem;
             }
+
+            .content-profile-name{
+                display: flex;
+                flex-direction: column;
+            }
+        }
+
+        .content-tag{
+            background: rgba(255, 143, 0, 0.2);
+            padding: 0.5rem 1rem;
         }
     }
 
+    .content-text{
+        font-size: 0.8rem;
+        font-weight: bold;
+    }
+    
+    .content-interact{
+        background: $black-aes;
+        display: flex;
+        padding: 0.7rem 1.5rem;
+        justify-content: space-between;
+        border-radius: 0 0 1rem 1rem;
+        color: #fff;
+        font-size: 0.8rem;
 
+        i{
+            color: white;
+        }
+        
+        .content-interact-comment,.send{
+            display: flex;
+            .comment{
+                margin-right: 0.5rem;
+            }
+            .show{
+                padding: 0.5rem;
+                background: #7CF9687D;
+                border-radius: 50%;
+            }
+            .show-no{
+                background: #F968687D;
+            }
+        }   
+    }
+}
 
+.post-content{
+    position: absolute;
+    width: 100%;
+    top:8rem;
+
+    .content-heading{
+        position: relative;
+        #heading{
+            width: 100%;
+            padding: 0.5rem;
+            font-family: 'Spartan', sans-serif;
+            font-weight: bold;
+            border:none;
+            outline: none;
+            font-size: 1rem;
+        }
+    }
+
+    .content-tag{
+        padding: 0.2rem !important;
+        #select-tag{
+            padding: 0.2rem 1rem;
+            border: none;
+            background-color: inherit;
+            outline: none;
+        }
+    }
+
+    .content-text{
+        #content{
+            width: 100%;
+            border:none;
+            outline: none;
+            font-family: 'Spartan', sans-serif;
+            font-weight: bold;
+            height: 6rem
+        }
+    }
+
+    .content-interact{
+        #cancel{
+            color: #fff;
+            font-family: 'Spartan', sans-serif;
+        }
+        #posted-content{
+            margin-right: 1rem;
+        }
+    }
 }

@@ -66,6 +66,7 @@
                         <div><input type="radio" name="filter-opt" value="jobs">jobs </div>
                         <div><input type="radio" name="filter-opt" value="all">all</div>
                         <div><input type="radio" name="filter-opt" value="it-css">it/css</div> 
+                        <div><input type="radio" name="filter-opt" value="committee">committee</div> 
                     </div>
                 </div>
             </div>
@@ -91,7 +92,7 @@
                 </div>
             </div>
             <div id="content-all">
-                <div class="content">
+                <div class="content temp">
                     <div class="content-padding">
                         <div class="content-heading">TCS is hiring web developers</div>
                         <div class="content-profile-info">
@@ -125,7 +126,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="content">
+                <div class="content temp">
                     <div class="content-padding">
                         <div class="content-heading">TCS is hiring web developers</div>
                         <div class="content-profile-info">
@@ -159,7 +160,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="content">
+                <div class="content temp">
                     <div class="content-padding">
                         <div class="content-heading">TCS is hiring web developers</div>
                         <div class="content-profile-info">
@@ -193,7 +194,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="content">
+                <div class="content temp">
                     <div class="content-padding">
                         <div class="content-heading">TCS is hiring web developers</div>
                         <div class="content-profile-info">
@@ -231,6 +232,43 @@
             </div>
         </main>
     </div>
+
+     <!--Post template-->
+     <div class="post-content temp all">
+        <div class="content-padding">
+            <div class="content-heading">
+                <input type="text" id="heading" placeholder="Enter heading">
+            </div>
+            <div class="content-profile-info">
+                <div class="content-profile-pic-name">
+                    <div class="content-profile-pic"><img src="images/profile-pic.jpg" alt="profile-pic"></div>
+                    <div class="content-profile-name">
+                        <span>Priya Nayak</span>
+                        <span>...</span>
+                    </div>                        
+                </div>
+                <div class="content-tag">
+                    <select id="select-tag">
+                        <option>jobs</option>
+                        <option>it/css</option>
+                        <option>bcom</option>
+                    </select>
+                </div>
+            </div>
+            <div class="content-text">
+                <textarea placeholder="Enter content" id="content"></textarea>
+            </div>
+        </div>
+        <div class="content-interact">
+            <button class="btn" id="cancel">cancel</button>
+            <div class="send post">
+                <button id="posted-content" class="btn"><i class="far fa-paper-plane"></i></button>
+                <div class="show show-no">
+                </div>
+            </div>
+        </div>
+    </div>
+
     <script src="script/script.js"></script>
 </body>
 </html>

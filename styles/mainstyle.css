@@ -2,6 +2,12 @@
 * {
   padding: 0;
   margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.overflow {
+  overflow: hidden;
 }
 
 body {
@@ -13,6 +19,15 @@ body .btn {
   background: none;
   border: none;
   outline: none;
+}
+
+body .all {
+  display: none;
+}
+
+body .opacity {
+  opacity: 0.2;
+  pointer-events: none;
 }
 
 nav {
@@ -57,12 +72,8 @@ nav #nav-icons #home-page-icon {
   margin-right: 1rem;
 }
 
-nav .all {
-  display: none;
-}
-
 nav .drop-down-menu-items {
-  overflow-y: scroll;
+  overflow: scroll;
   position: absolute;
   background: #FCFCFC;
   padding: 1rem 0;
@@ -70,7 +81,6 @@ nav .drop-down-menu-items {
   width: 70%;
   height: 100vh;
   top: 10.2vh;
-  padding-bottom: 10rem;
 }
 
 nav .drop-down-menu-items .drop-down-menu-item {
@@ -97,7 +107,8 @@ nav .drop-down-menu-items .drop-down-menu-item #filter {
 }
 
 nav .drop-down-menu-items .filter-options {
-  padding-bottom: 2rem;
+  margin-bottom: 5rem;
+  overflow: scroll;
 }
 
 nav .drop-down-menu-items .filter-options div {
@@ -194,23 +205,23 @@ main #content-all {
   margin-top: 1rem;
 }
 
-main #content-all .content {
+.temp {
   margin-bottom: 1rem;
   border-radius: 1rem;
   background: white;
 }
 
-main #content-all .content .content-padding {
+.temp .content-padding {
   padding: 1.3rem 1rem;
 }
 
-main #content-all .content .content-heading {
+.temp .content-heading {
   font-size: 1rem;
   font-weight: bold;
   margin-bottom: 0.5rem;
 }
 
-main #content-all .content .content-profile-info {
+.temp .content-profile-info {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -224,7 +235,7 @@ main #content-all .content .content-profile-info {
   margin-bottom: 0.6rem;
 }
 
-main #content-all .content .content-profile-info .content-profile-pic-name {
+.temp .content-profile-info .content-profile-pic-name {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -233,17 +244,17 @@ main #content-all .content .content-profile-info .content-profile-pic-name {
           align-items: center;
 }
 
-main #content-all .content .content-profile-info .content-profile-pic-name .content-profile-pic {
+.temp .content-profile-info .content-profile-pic-name .content-profile-pic {
   margin-right: 1rem;
 }
 
-main #content-all .content .content-profile-info .content-profile-pic-name .content-profile-pic img {
+.temp .content-profile-info .content-profile-pic-name .content-profile-pic img {
   width: 50px;
   height: 50px;
   border-radius: 10px;
 }
 
-main #content-all .content .content-profile-info .content-profile-pic-name .content-profile-name {
+.temp .content-profile-info .content-profile-pic-name .content-profile-name {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -253,17 +264,17 @@ main #content-all .content .content-profile-info .content-profile-pic-name .cont
           flex-direction: column;
 }
 
-main #content-all .content .content-profile-info .content-tag {
+.temp .content-profile-info .content-tag {
   background: rgba(255, 143, 0, 0.2);
   padding: 0.5rem 1rem;
 }
 
-main #content-all .content .content-text {
+.temp .content-text {
   font-size: 0.8rem;
   font-weight: bold;
 }
 
-main #content-all .content .content-interact {
+.temp .content-interact {
   background: #212121;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -277,27 +288,76 @@ main #content-all .content .content-interact {
   font-size: 0.8rem;
 }
 
-main #content-all .content .content-interact i {
+.temp .content-interact i {
   color: white;
 }
 
-main #content-all .content .content-interact .content-interact-comment {
+.temp .content-interact .content-interact-comment, .temp .content-interact .send {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-main #content-all .content .content-interact .content-interact-comment .comment {
+.temp .content-interact .content-interact-comment .comment, .temp .content-interact .send .comment {
   margin-right: 0.5rem;
 }
 
-main #content-all .content .content-interact .content-interact-comment .show {
+.temp .content-interact .content-interact-comment .show, .temp .content-interact .send .show {
   padding: 0.5rem;
   background: #7CF9687D;
   border-radius: 50%;
 }
 
-main #content-all .content .content-interact .content-interact-comment .show-no {
+.temp .content-interact .content-interact-comment .show-no, .temp .content-interact .send .show-no {
   background: #F968687D;
+}
+
+.post-content {
+  position: absolute;
+  width: 100%;
+  top: 8rem;
+}
+
+.post-content .content-heading {
+  position: relative;
+}
+
+.post-content .content-heading #heading {
+  width: 100%;
+  padding: 0.5rem;
+  font-family: 'Spartan', sans-serif;
+  font-weight: bold;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+}
+
+.post-content .content-tag {
+  padding: 0.2rem !important;
+}
+
+.post-content .content-tag #select-tag {
+  padding: 0.2rem 1rem;
+  border: none;
+  background-color: inherit;
+  outline: none;
+}
+
+.post-content .content-text #content {
+  width: 100%;
+  border: none;
+  outline: none;
+  font-family: 'Spartan', sans-serif;
+  font-weight: bold;
+  height: 6rem;
+}
+
+.post-content .content-interact #cancel {
+  color: #fff;
+  font-family: 'Spartan', sans-serif;
+}
+
+.post-content .content-interact #posted-content {
+  margin-right: 1rem;
 }
 /*# sourceMappingURL=mainstyle.css.map */
