@@ -17,7 +17,9 @@
             </div>
             <div id="nav-icons">
                 <div id="home-page-icon">
-                    <a href="index.html"><i class="fas fa-home"></i></a>
+                    <a href="index.html"><i class="fas fa-home"></i>
+                        <span>Home</span>
+                    </a>
                 </div>
                 <div id="drop-down-menu-div">
                     <button id="drop-down-menu-btn" class="btn"><i class="fas fa-ellipsis-h"></i></button>
@@ -26,34 +28,34 @@
                     <div class="drop-down-menu-item">
                         <a href="#">
                             <i class="far fa-heart"></i>
-                            Community
+                            <span>Community</span>
                         </a>  
                     </div>
                     <div class="drop-down-menu-item">
                         <a href="#">
                             <i class="far fa-envelope"></i>
-                            Message
+                            <span>Message</span>
                         </a>  
                     </div>
                     <div class="drop-down-menu-item">
                         <a href="#">
                             <i class="far fa-user"></i>
-                            Profile
+                            <span>Profile</span>
                         </a>  
                     </div>
-                    <div class="drop-down-menu-item">
-                        <a href="#">
+                    <div class="drop-down-menu-item" id="committee-link-div">
+                        <a href="#" id="committee-link">
                             <i class="fas fa-user-friends"></i>
-                            Committee
+                            <span>Committee</span>
                         </a>  
                     </div>
                     <div class="drop-down-menu-item">
                         <a href="#">
                             <i class="far fa-bookmark"></i>
-                            Saved
+                            <span>Saved</span>
                         </a>  
                     </div>
-                    <div class="drop-down-menu-item">
+                    <div class="drop-down-menu-item" id="filter-div">
                         <button id="filter" class="btn">
                             <i class="fas fa-list-ul"></i>
                             Filter
@@ -68,6 +70,10 @@
                         <div><input type="radio" name="filter-opt" value="it-css">it/css</div> 
                         <div><input type="radio" name="filter-opt" value="committee">committee</div> 
                     </div>
+                </div>
+                <div id="profile-pic-nav-div">
+                    <img src="images/profile-pic.jpg" alt="profile pic" id="profile-pic-nav">
+                    <span>Me</span>
                 </div>
             </div>
         </nav>
@@ -91,6 +97,7 @@
                     </div>
                 </div>
             </div>
+
             <div id="content-all">
                 <div class="content temp">
                     <div class="content-padding">
@@ -228,13 +235,126 @@
                         </div>
                     </div>
                 </div>
+                <div class="content temp">
+                    <div class="content-padding">
+                        <div class="content-heading">TCS is hiring web developers</div>
+                        <div class="content-profile-info">
+                            <div class="content-profile-pic-name">
+                                <div class="content-profile-pic"><img src="images/profile-pic.jpg" alt="profile-pic"></div>
+                                <div class="content-profile-name">
+                                    <span>Priya Nayak</span>
+                                    <span>11 April 2021 13:02</span>
+                                </div>                        
+                            </div>
+                            <div class="content-tag">
+                                jobs
+                            </div>
+                        </div>
+                        <div class="content-text">
+                            Hey guys there are jobs available in TCS click this link to apply 
+                            https://www.tcs.com
+                        </div>
+                    </div>
+                    <div class="content-interact">
+                        <div class="content-interact-save">
+                            <button class="btn"><i class="far fa-bookmark"></i></button>
+                        </div>
+                        <div class="content-interact-comment">
+                            <div class="comment">
+                            <button class="btn"><i class="far fa-comment-alt"></i></button>
+                            <span>3</span>
+                            </div>
+                            <div class="show">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="content temp">
+                    <div class="content-padding">
+                        <div class="content-heading">TCS is hiring web developers</div>
+                        <div class="content-profile-info">
+                            <div class="content-profile-pic-name">
+                                <div class="content-profile-pic"><img src="images/profile-pic.jpg" alt="profile-pic"></div>
+                                <div class="content-profile-name">
+                                    <span>Priya Nayak</span>
+                                    <span>11 April 2021 13:02</span>
+                                </div>                        
+                            </div>
+                            <div class="content-tag">
+                                jobs
+                            </div>
+                        </div>
+                        <div class="content-text">
+                            Hey guys there are jobs available in TCS click this link to apply 
+                            https://www.tcs.com
+                        </div>
+                    </div>
+                    <div class="content-interact">
+                        <div class="content-interact-save">
+                            <button class="btn"><i class="far fa-bookmark"></i></button>
+                        </div>
+                        <div class="content-interact-comment">
+                            <div class="comment">
+                            <button class="btn"><i class="far fa-comment-alt"></i></button>
+                            <span>3</span>
+                            </div>
+                            <div class="show">
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <!--End of posts-->
+            </div>
+
+            <div id="committee">
+                <div class="black"></div>
+                <div class="centered committee-cont">
+                    <i class="fas fa-user-friends"></i>
+                </div>
+                <div class="all-committee">
+                    <div class="committee">
+                        <span class="committee-side"></span>
+                        <div class="committee-content">
+                            <div class="committee-name">Technobeat</div>
+                            <div class="committee-dept">Department : IT and CS</div>    
+                        </div>
+                        <button class="btn committee-add-sub"><i class="far fa-minus-square"></i></button>
+                    </div>
+                    <div class="committee">
+                        <span class="committee-side"></span>
+                        <div class="committee-content">
+                            <div class="committee-name">Spectrum</div>
+                            <div class="committee-dept">Department : All</div>
+                        </div>
+                        <button class="btn committee-add-sub"><i class="far fa-plus-square"></i></button>
+                    </div>
+                    <div class="committee">
+                        <span class="committee-side"></span>
+                        <div class="committee-content">
+                            <div class="committee-name">Natyakarmi</div>
+                            <div class="committee-dept">Department : All</div>
+                        </div>
+                        <button class="btn committee-add-sub"><i class="far fa-plus-square"></i></button>
+                    </div>
+                    <div class="committee">
+                        <span class="committee-side"></span>
+                        <div class="committee-content">
+                            <div class="committee-name">Panache</div>
+                            <div class="committee-dept">Department : Bcom</div>
+                        </div>
+                        <button class="btn committee-add-sub"><i class="far fa-minus-square"></i></button>
+                    </div>
+                    <!--end of committess-->
+                </div>
             </div>
         </main>
     </div>
 
+    <!--back to top-->
+    <div id="back-to-top-div"><button id="back-to-top" class="btn">up</button></div>
+
      <!--Post template-->
-     <div class="post-content temp all">
+    <div class="post-content temp all">
         <div class="content-padding">
             <div class="content-heading">
                 <input type="text" id="heading" placeholder="Enter heading">

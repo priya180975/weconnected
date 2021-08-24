@@ -43,6 +43,49 @@ function addpost()
 
 function postTemplateTop()
 {
-    postTemplate.style.top="0rem";
+    if(window.innerWidth<"600")
+    {
+        postTemplate.style.top="0rem";
+    }
 }
 
+//committee
+let commiteeBtn=document.querySelectorAll(".committee-add-sub");   
+console.log(commiteeBtn);
+
+commiteeBtn.forEach(a => {
+    a.addEventListener("click",commiteeBtnChange)
+});
+
+function commiteeBtnChange(e)
+{
+    if(e.target.classList[1]=="fa-plus-square")
+    {
+        e.target.classList.remove(e.target.classList[1]);
+        e.target.classList.add("fa-minus-square");
+    }
+    else{
+        e.target.classList.remove(e.target.classList[1]);
+        e.target.classList.add("fa-plus-square");
+    }
+}
+
+//back to top
+let backToUpbtn=document.querySelector("#back-to-top");
+
+setInterval(check,100);
+function check()
+{
+    if(window.scrollY>="300")
+    {
+        backToUpbtn.classList.remove("all");
+    }
+    else{backToUpbtn.classList.add("all");}
+}
+
+backToUpbtn.addEventListener("click",backToUp);
+
+function backToUp()
+{
+    window.scrollTo(0,0);
+}
