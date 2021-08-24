@@ -18,7 +18,7 @@ $mattepersianblue:#00717F;
 }
 
 body{
-    background: url(/images/mobile-login-background.png),wheat;
+    background: url(../images/mobile-login-background.png),wheat;
     background-size:auto;
     background-position-y: -200px;
     color: $white;
@@ -42,10 +42,13 @@ body{
     width: 80%;
     margin: 0 auto;
 
-    #error{
-        color:$red;
+     #error{
         margin-bottom: 4rem;
-        font-size: 0.8rem;
+        
+        .sec3{
+            color:$red;
+            font-size: 0.8rem;
+        }
     }
     
     #form{
@@ -103,7 +106,7 @@ body{
     }
 
     body{
-        background:url(/images/desktop-login-background.png),wheat;
+        background:url(../images/desktop-login-background.png),wheat;
         background-position-y: -150px;
         background-size: auto;
     }

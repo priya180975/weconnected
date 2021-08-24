@@ -9,10 +9,52 @@
 </head>
 <body>
     <div class="container" id="sign-in-cont">
-        <div id="error">Incorrect login details</div>
+        <div id="error">
+            <?php
+                
+                if(isset($_GET["error"]))
+                {
+                    if($_GET["error"]=="emptyInput")
+                    {
+                        echo "<span class='sec3'>Fill in all the details</span>";
+                    }
+
+                    else if($_GET["error"]=="invalidUsername")
+                    {
+                        echo "<span class='sec3'>Invalid Username</span>";
+                    }
+
+                    else if($_GET["error"]=="invalidEmail")
+                    {
+                        echo "<span class='sec3'>Invalid Email</span>";
+                    }
+
+                    else if($_GET["error"]=="passwordMatchFail")
+                    {
+                        echo "<span class='sec3'>Passwords do not match</span>";
+                    }
+
+                    else if($_GET["error"]=="stmtfailed")
+                    {
+                        echo "<span class='sec3'>Connection failed</span>";
+                    }
+
+                    else if($_GET["error"]=="usernametaken")
+                    {
+                        echo "<span class='sec3'>Username or Email is taken</span>";
+                    }
+
+                    else if($_GET["error"]=="none")
+                    {
+                        echo '<p>You have signed up!</p>';
+                    }
+                }
+
+            ?>
+        </div>
 
         <div id="form">
-            <form action="" name="signin">
+            <form action="includes/signup.inc.php" name="signin" method="post">
                 <div class="margin2">
                     <label for="name">Full Name</label>
                     <input type="text" name="name" id="name" placeholder="Enter full name">
@@ -44,5 +86,6 @@
         </div>
         
     </div>
+    <script src="script/signin.js"></script>
 </body>
 </html>

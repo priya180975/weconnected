@@ -10,7 +10,7 @@
 }
 
 body {
-  background: url(/images/mobile-login-background.png), wheat;
+  background: url(../images/mobile-login-background.png), wheat;
   background-size: auto;
   background-position-y: -200px;
   color: #FFFFFF;
@@ -37,8 +37,11 @@ body {
 }
 
 .container #error {
-  color: #FF0000;
   margin-bottom: 4rem;
+}
+
+.container #error .sec3 {
+  color: #FF0000;
   font-size: 0.8rem;
 }
 
@@ -87,7 +90,7 @@ body {
     color: #01403A;
   }
   body {
-    background: url(/images/desktop-login-background.png), wheat;
+    background: url(../images/desktop-login-background.png), wheat;
     background-position-y: -150px;
     background-size: auto;
   }

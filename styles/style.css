@@ -1,0 +1,281 @@
+@import url("https://fonts.googleapis.com/css2?family=Spartan&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  font-family: 'Spartan', sans-serif;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
+  background: #F8F8FB;
+}
+
+#container {
+  width: 100%;
+  position: relative;
+}
+
+header {
+  margin-bottom: -6px;
+  position: relative;
+  width: 100%;
+}
+
+header #header-img {
+  width: 100%;
+  height: 45vh;
+}
+
+header #logout-div {
+  top: 0;
+  position: absolute;
+  right: 0;
+}
+
+header #logout-div #logout {
+  margin: 1rem;
+  background: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+}
+
+header #header-title {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  margin: 15vh 0;
+}
+
+header #header-title #header-title-back {
+  padding: 25px;
+  background: #ffffff70;
+  -webkit-filter: blur(20px);
+          filter: blur(20px);
+  width: 100%;
+}
+
+header #header-title span {
+  font-size: 2.2rem;
+  margin: 0 8%;
+  font-weight: 600;
+  position: absolute;
+  top: 10%;
+}
+
+header #post-filter {
+  position: absolute;
+  top: 25vh;
+  right: 0;
+  margin-right: 3%;
+  text-align: right;
+}
+
+header #post-filter #post-btn-div #post-btn {
+  cursor: pointer;
+  background: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: none;
+  padding: 0.5rem 1.5rem;
+  border-radius: 100px;
+  margin-bottom: 1rem;
+  cursor: pointer;
+}
+
+header #post-filter #post-btn-div #post-btn img {
+  margin-right: 10px;
+}
+
+header #post-filter #filter-div {
+  color: #fff;
+  font-size: 0.8rem;
+}
+
+header #post-filter #filter-div select {
+  cursor: pointer;
+  padding: 0.2rem 1rem;
+  border: none;
+  text-align: center;
+  margin-left: 0.5rem;
+  outline: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+
+main {
+  position: relative;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1.5fr 1fr;
+      grid-template-columns: 1fr 1.5fr 1fr;
+}
+
+nav {
+  position: -webkit-sticky !important;
+  position: sticky !important;
+  top: 100px;
+  margin-left: 5rem;
+  margin-right: 10%;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+}
+
+nav .nav-button-div {
+  width: 60%;
+}
+
+nav .nav-button-div .nav-button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  text-align: left;
+  cursor: pointer;
+  width: 100%;
+  background: none;
+  padding: 0.6rem;
+  border-radius: 100px;
+  border: none;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+  text-decoration: none;
+  color: black;
+  font-size: 0.9rem;
+}
+
+nav .nav-button-div .nav-button img {
+  margin-right: 10px;
+}
+
+nav .nav-button-div .nav-button:hover {
+  background: #035951;
+  color: white;
+}
+
+nav .nav-button-div:first-child {
+  margin-top: 1rem;
+}
+
+#allposts {
+  margin-top: 5%;
+  -ms-grid-column: 2;
+  grid-column: 2;
+}
+
+#allposts .post-template {
+  background: #fff;
+  padding: 1.3rem;
+  margin-bottom: 1rem;
+  border-radius: 0.5rem;
+}
+
+#allposts .post-template .post-heading {
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+#allposts .post-template .profile-details-tag {
+  padding: 0 0.2rem;
+  margin-bottom: 1rem;
+  font-size: 0.6rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#allposts .post-template .profile-details-tag .profile-details-main {
+  width: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#allposts .post-template .profile-details-tag .profile-details-main img {
+  width: 50px;
+  height: 50px;
+  border-radius: 4px;
+}
+
+#allposts .post-template .profile-details-tag .profile-details-main .profile-details {
+  margin-left: 5%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#allposts .post-template .profile-details-tag .tag-name {
+  background-color: rgba(240, 128, 128, 0.788);
+  padding: 0.4rem 2rem;
+}
+
+#allposts .post-template .content {
+  font-size: 0.8rem;
+  margin-bottom: 1rem;
+}
+
+#allposts .post-template .bottom-post {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 0.6rem;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#allposts .post-template .bottom-post .btn {
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+aside {
+  margin-left: 30%;
+  border-left: 1px solid black;
+  padding: 2rem 1rem;
+  text-align: center;
+  font-size: 0.8rem;
+  font-weight: bolder;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 90px;
+}
+
+aside img {
+  width: 120px;
+  height: 120px;
+  border-radius: 100%;
+  margin-bottom: 1rem;
+}
+
+aside .aside-profile-name {
+  margin-bottom: 1rem;
+}
+/*# sourceMappingURL=style.css.map */
