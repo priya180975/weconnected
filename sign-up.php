@@ -82,7 +82,7 @@
         </div>
 
         <div id="link">
-            Already a User?<a href="sign-in.html">Sign In</a>
+            Already a User?<a href="sign-in.php">Sign In</a>
         </div>
         
     </div>

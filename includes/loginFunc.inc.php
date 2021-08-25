@@ -102,4 +102,46 @@
 
     }
 
+    //sign in
+    function emptySignInInput($username,$password)
+    {
+        if(empty($username)|| empty($password))
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+
+    function loginUser($conn,$username,$password)
+    {
+        $uidexists=uidExists($conn,$username,$password);
+        if($uidexists==false)
+        {
+            header("location: ../sign-in.php?error=invalidlogin");
+            exit();
+        }
+
+        $passwordHashed=$uidexists['pwd'];
+        $checkpassword=password_verify($password,$passwordHashed);
+
+        if($checkpassword==false)
+        {
+            header("location: ../sign-in.php?error=invalidlogin");
+            exit();
+        }
+
+        else if($checkpassword==true)
+        {
+            session_start();
+            $_SESSION["userid"]=$uidexists["uid"];
+            $_SESSION["username"]=$uidexists["username"];
+
+            header("location:../main.html");
+            exit();
+        }
+    }
+
 ?>

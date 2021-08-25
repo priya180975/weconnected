@@ -9,10 +9,25 @@
 </head>
 <body>
     <div class="container">
-        <div id="error">Incorrect login details</div>
+        <div id="error">
+            <?php
+                if(isset($_GET["error"]))
+                {
+                    if($_GET["error"]=="invalidlogin")
+                    {
+                        echo "<span class='sec3'>Invalid login details</span>";
+                    }
+
+                    if($_GET["error"]=="emptyInput")
+                    {
+                        echo "<span class='sec3'>Fill all the details</span>";
+                    }
+                }
+            ?>
+        </div>
 
         <div id="form">
-            <form action="" name="signin">
+            <form action="includes/signin.inc.php" name="signin" method="post">
                 <div class="margin2">
                     <label for="user">Email address / Username</label>
                     <input type="text" name="user" id="user" placeholder="Enter email address or username">
@@ -28,7 +43,7 @@
         </div>
 
         <div id="link">
-            New user?<a href="sign-up.html">Create an account</a>
+            New user?<a href="sign-up.php">Create an account</a>
         </div>
         
     </div>
