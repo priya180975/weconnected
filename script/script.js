@@ -26,6 +26,7 @@ let postBtn=document.querySelector("#post-btn");
 let postTemplate=document.querySelector(".post-content");
 let cancelPost=document.querySelector("#cancel");
 let successPost=document.querySelector("#posted-content");
+let currenttime=document.querySelector("#currenttime");
 
 postBtn.addEventListener("click",addpost);
 cancelPost.addEventListener("click",addpost);
@@ -35,10 +36,15 @@ postTemplate.addEventListener("click",postTemplateTop)
 
 function addpost()
 {
+    var today=new Date();
+    var date=today.getDate()+'-'+(today.getMonth()+1)+'-'+today.getFullYear();
+    var time =today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+    
     postTemplate.classList.toggle("all");
     container.classList.toggle("opacity");
     body.classList.toggle("overflow");
-    window.scrollTo(0,0)
+    window.scrollTo(0,0);
+    currenttime.innerHTML=date+' '+time;
 }
 
 function postTemplateTop()
@@ -89,3 +95,5 @@ function backToUp()
 {
     window.scrollTo(0,0);
 }
+
+

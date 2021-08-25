@@ -137,11 +137,16 @@
         {
             session_start();
             $_SESSION["userid"]=$uidexists["uid"];
+            $_SESSION["email"]=$uidexists["email"];
             $_SESSION["username"]=$uidexists["username"];
+            $_SESSION["fullname"]=$uidexists["fullname"];
+            // $_SESSION["email"]=$uidexists["email"];
 
-            header("location:../main.html");
+            header("location:../main.php");
             exit();
         }
     }
 
+
+    
 ?>
