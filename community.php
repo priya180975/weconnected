@@ -14,7 +14,7 @@
        
         <!--nav bar-->
         <?php include_once 'nav.php'; ?>
-
+    
         <main>
             
             <div id="right-desk">
@@ -26,7 +26,7 @@
                         <div class="profile-info">
                             
                             <div class="name">
-                                <?php 
+                                <!-- <?php 
                                     if(isset($_SESSION["fullname"]))
                                     { 
                                         echo $_SESSION["fullname"];
@@ -35,7 +35,8 @@
                                     {
                                         echo "Invalid";
                                     }
-                                ?>
+                                ?> -->
+                                Priya Nayak
                             </div>
 
                             <div class="course-student">
@@ -338,7 +339,7 @@
                     <div class="content-profile-pic"><img src="images/profile-pic.jpg" alt="profile-pic"></div>
                     <div class="content-profile-name">
                         <span>
-                            <?php 
+                            <!-- <?php 
                                 if(isset($_SESSION["fullname"]))
                                 { 
                                     echo $_SESSION["fullname"];
@@ -347,7 +348,7 @@
                                 {
                                     echo "Invalid";
                                 }
-                            ?>
+                            ?> -->
                         </span>
                         <span id="currenttime">
                         </span>
@@ -376,5 +377,8 @@
     </div>
 
     <script src="script/script.js"></script>
+
+
+
 </body>
 </html>

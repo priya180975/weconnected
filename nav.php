@@ -18,7 +18,7 @@
             </div>
             <div class="drop-down-menu-items all">
                 <div class="drop-down-menu-item">
-                    <a href="community.html">
+                    <a href="community.php">
                         <i class="far fa-heart"></i>
                         <span>Community</span>
                     </a>  

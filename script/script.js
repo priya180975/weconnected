@@ -3,6 +3,16 @@ let container=document.querySelector("#container");
 
 
 //dropdown menu 
+
+// if(window.innerWidth>"600")
+// {
+//     dropDownMenuItems.classList.remove("all");
+// }
+// else
+// {
+//     dropDownMenuItems.classList.add("all");
+// }
+
 let dropDownMenu=document.querySelector("#drop-down-menu-btn");
 let dropDownMenuItems=document.querySelector(".drop-down-menu-items");
 let filterBtn=document.querySelector("#filter");

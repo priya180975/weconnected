@@ -146,6 +146,12 @@ main{
     position: relative;
     top:13vh;
 
+    #right-desk{
+        .filter-options{
+            display: none;
+        }
+    }
+
     #profile-info-display{
         position: relative;
         background:#EDF1FF;
@@ -477,15 +483,52 @@ main{
     main{
         padding: 0 2rem ;
         display: grid;
-        grid-template-columns: 0.8fr 1.5fr 0.8fr;
+        grid-template-columns: 0.8fr 1.5fr 0.6fr;
 
-        #profile-info-display{
+        #right-desk{
             grid-column: 3;
             grid-row: 1;
-            height: max-content;
-            top:5rem;
-            height: max-content;
-            position: sticky;
+            position: relative;
+            
+            .filter-options{
+                display: block;
+                position: sticky;
+                z-index: 1;
+                height: max-content;
+                top:5rem;
+                background: #F9FAFE;
+                margin-top: 2rem;
+                border-radius: 15px;
+
+                .black{
+                    background: rgba(187, 215, 178, 0.5);
+                }
+                
+                .centered{
+                    
+                    i{
+                        background: rgba(187, 215, 178, 0.9);
+                        padding: 1rem;
+                        border-radius: 50%;
+                        border:2px solid #F9FAFE;
+                    }
+                }
+
+                .filter-desk-data{
+                    padding-bottom: 2rem;
+                    width: max-content;
+                    margin: 0 auto;
+
+                    div{
+                        padding: 0.5rem 0;
+                        font-weight: bold;
+                        
+                        input{
+                            margin-right: 0.5rem;
+                        }
+                    }
+                }
+            }
         }
 
         #content-all{

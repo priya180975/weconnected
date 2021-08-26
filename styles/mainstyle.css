@@ -158,6 +158,10 @@ main {
   top: 13vh;
 }
 
+main #right-desk .filter-options {
+  display: none;
+}
+
 main #profile-info-display {
   position: relative;
   background: #EDF1FF;
@@ -498,21 +502,51 @@ main #committee {
     padding: 0 2rem;
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: 0.8fr 1.5fr 0.8fr;
-        grid-template-columns: 0.8fr 1.5fr 0.8fr;
+    -ms-grid-columns: 0.8fr 1.5fr 0.6fr;
+        grid-template-columns: 0.8fr 1.5fr 0.6fr;
   }
-  main #profile-info-display {
+  main #right-desk {
     -ms-grid-column: 3;
     grid-column: 3;
     -ms-grid-row: 1;
     grid-row: 1;
+    position: relative;
+  }
+  main #right-desk .filter-options {
+    display: block;
+    position: -webkit-sticky;
+    position: sticky;
+    z-index: 1;
     height: -webkit-max-content;
     height: -moz-max-content;
     height: max-content;
     top: 5rem;
-    height: max-content;
-    position: -webkit-sticky;
-    position: sticky;
+    background: #F9FAFE;
+    margin-top: 2rem;
+    border-radius: 15px;
+  }
+  main #right-desk .filter-options .black {
+    background: rgba(187, 215, 178, 0.5);
+  }
+  main #right-desk .filter-options .centered i {
+    background: rgba(187, 215, 178, 0.9);
+    padding: 1rem;
+    border-radius: 50%;
+    border: 2px solid #F9FAFE;
+  }
+  main #right-desk .filter-options .filter-desk-data {
+    padding-bottom: 2rem;
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+    margin: 0 auto;
+  }
+  main #right-desk .filter-options .filter-desk-data div {
+    padding: 0.5rem 0;
+    font-weight: bold;
+  }
+  main #right-desk .filter-options .filter-desk-data div input {
+    margin-right: 0.5rem;
   }
   main #content-all {
     -ms-grid-column: 2;
