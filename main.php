@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
     <link rel="icon" type="image/svg" href="../images/logo-dots.svg">
     <link rel="stylesheet" type="text/css" href="styles/mainstyle.css">
@@ -14,9 +15,18 @@
        
         <!--nav bar-->
         <?php include_once 'nav.php'; ?>
-
+        
         <main>
-            
+        <?php 
+            if(isset($_GET["error"]))
+            {
+                if($_GET["error"]=="emptyInput")
+                {
+                    echo "Post not submitted";
+                }
+            }
+        ?>
+
             <div id="right-desk">
                 <!--profile-->
                 <div id="profile-info-display">
@@ -45,9 +55,14 @@
                         </div>
 
                         <div id="post-btn-div">
-                            <button id="post-btn" class="btn">
-                                <i class="fas fa-plus"></i>Add a post
-                            </button>
+                            <?php
+                                if(isset($_SESSION["fullname"]))
+                                { 
+                                    echo '<button id="post-btn" class="btn">
+                                            <i class="fas fa-plus"></i>Add a post 
+                                            </button>';
+                                }
+                            ?>                                
                     </div>
                     </div>
                 </div>
@@ -328,10 +343,10 @@
     <div id="back-to-top-div"><button id="back-to-top" class="btn">up</button></div>
 
      <!--Post template-->
-    <div class="post-content temp all">
+    <form class="post-content temp all" action="includes/post.inc.php" method="post" name="post-form" >
         <div class="content-padding">
             <div class="content-heading">
-                <input type="text" id="heading" placeholder="Enter heading">
+                <input type="text" id="heading" placeholder="Enter heading" name="heading">
             </div>
             <div class="content-profile-info">
                 <div class="content-profile-pic-name">
@@ -354,7 +369,7 @@
                     </div>                        
                 </div>
                 <div class="content-tag">
-                    <select id="select-tag">
+                    <select id="select-tag" name="select-tag">
                         <option>jobs</option>
                         <option>it/css</option>
                         <option>bcom</option>
@@ -362,18 +377,20 @@
                 </div>
             </div>
             <div class="content-text">
-                <textarea placeholder="Enter content" id="content"></textarea>
+                <textarea placeholder="Enter content" id="content" name="content"></textarea>
             </div>
         </div>
         <div class="content-interact">
             <button class="btn" id="cancel">cancel</button>
             <div class="send post">
-                <button id="posted-content" class="btn"><i class="far fa-paper-plane"></i></button>
-                <div class="show show-no">
-                </div>
+            <!-- <input type="checkbox" class="btn show" id="post-show-btn" name="show">
+            <input type="checkbox" name="chk1">   -->
+                <button type="submit" id="posted-content" name="submit" class="btn"><i class="far fa-paper-plane"></i></button>
+                <div  class="btn show"  id="post-show-btn"></div>
             </div>
+
         </div>
-    </div>
+    </form>
 
     <script src="script/script.js"></script>
 </body>

@@ -1,6 +1,8 @@
 let body=document.querySelector("body");
 let container=document.querySelector("#container");
-
+var today=new Date();
+var date=today.getDate()+'-'+(today.getMonth()+1)+'-'+today.getFullYear();
+var time =today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
 
 //dropdown menu 
 
@@ -35,26 +37,19 @@ function showFilterOpt()
 let postBtn=document.querySelector("#post-btn");
 let postTemplate=document.querySelector(".post-content");
 let cancelPost=document.querySelector("#cancel");
-let successPost=document.querySelector("#posted-content");
 let currenttime=document.querySelector("#currenttime");
 
 postBtn.addEventListener("click",addpost);
 cancelPost.addEventListener("click",addpost);
-successPost.addEventListener("click",addpost);
-
 postTemplate.addEventListener("click",postTemplateTop)
 
 function addpost()
-{
-    var today=new Date();
-    var date=today.getDate()+'-'+(today.getMonth()+1)+'-'+today.getFullYear();
-    var time =today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
-    
+{    
     postTemplate.classList.toggle("all");
     container.classList.toggle("opacity");
     body.classList.toggle("overflow");
     window.scrollTo(0,0);
-    currenttime.innerHTML=date+' '+time;
+    currenttime.innerHTML=date;
 }
 
 function postTemplateTop()
@@ -106,4 +101,14 @@ function backToUp()
     window.scrollTo(0,0);
 }
 
+//show hide (not implemented)
+let showhide=document.querySelector("#post-show-btn");
 
+showhide.addEventListener("click",change)
+function change()
+{
+    showhide.classList.toggle("show-no");
+    showhide.classList.contains("show-no")?
+    showhide.setAttribute("name","show-no"):
+    showhide.setAttribute("name","show");
+}

@@ -317,6 +317,10 @@ main #committee {
   color: white;
 }
 
+.temp .content-interact #post-show-btn {
+  cursor: pointer;
+}
+
 .temp .content-interact .content-interact-comment, .temp .content-interact .send {
   display: -webkit-box;
   display: -ms-flexbox;

@@ -285,6 +285,10 @@ main{
             color: white;
         }
         
+        #post-show-btn{
+            cursor: pointer;
+        }
+        
         .content-interact-comment,.send{
             display: flex;
             .comment{

@@ -1,0 +1,37 @@
+finaldb : database
+
+table 1:
+
+users
+-userid (pk)
+-username
+-fullname
+-email
+-password
+-timestamp
+
+table 2
+
+post 
+-userid (fk) 
+// -username 
+-postid (pk)
+-heading 
+-content 
+-timestamp
+-topic
+-p/q
+-hide/show
+
+
+table 3
+comment 
+-commentid (pk)
+-postid (fk)
+-content
+-timestamp
+
+table 4
+committee
+-commid
+-
