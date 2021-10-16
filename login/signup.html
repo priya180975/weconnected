@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link href="../stylesheet/login.css" type="text/css" rel="stylesheet">
+    <link rel="icon" type="image/svg" href="../images/logo-dots.svg">
+    <title>WeConnected | Sign Up</title>
+</head>
+<body>
+    <div class="container" id="sign-in-cont">
+        <div id="error">
+            
+        </div>
+
+        <div id="form">
+            <form action="#" method="post" enctype="multipart/form-data" autocomplete="off" id="form-data" name="form-data">
+                <div class="form__input">
+                    <label for="name">Full Name</label>
+                    <input type="text" name="name" placeholder="Enter full name" required>
+                </div>
+                <div class="form__input">
+                    <label for="email-id">Email address</label>
+                    <input type="email" name="email-id" placeholder="Enter email id" required>
+                </div>
+                <div class="form__input">
+                    <label for="username">Username</label>
+                    <input type="text" name="username" placeholder="Create a username" required>
+                </div>
+                <div class="form__input">
+                    <label for="password">Password</label>
+                    <input type="password" name="password" placeholder="Create a password" required>
+                </div>
+                <div class="form__input">
+                    <label for="cpassword">Confirm Password</label>
+                    <input type="password" name="cpassword" required>
+                </div>
+
+                <div class="type_user-div">
+                    Select the Type Of User
+                    <div class=type_user>
+                        <input type="radio" name="type" class="type_user--input" value="Teacher" required>Teacher<br>
+                        <input type="radio" name="type" class="type_user--input" value="Committee" required>Committee<br>
+                        <input type="radio" name="type" class="type_user--input" value="User" required>User/Student
+                    </div>
+                </div>
+
+                <div class="form__input"  id="btn">
+                    <button type="submit" name="submit" id="submit">Sign Up</button>
+                </div>
+            </form>
+        </div>
+
+        <div id="link">
+            Already a User?<a href="signin.html">Sign In</a>
+        </div>
+        
+    </div>
+    <script src="../javascript/signup.js"></script>
+
+</body>
+</html>

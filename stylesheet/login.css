@@ -1,0 +1,171 @@
+@import url("https://fonts.googleapis.com/css2?family=Spartan:wght@300&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  font-family: 'Spartan', sans-serif;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+body {
+  background: url(../images/mobile-login-background.png), wheat;
+  background-size: auto;
+  background-position-y: -200px;
+  color: #FFFFFF;
+  font-size: 1.8rem;
+}
+
+.form__input {
+  margin-bottom: 2rem;
+}
+
+#sign-in-cont {
+  top: 2em;
+}
+
+#sign-in-cont #error {
+  margin-bottom: 2rem;
+}
+
+.container {
+  position: relative;
+  top: 8em;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.container #error {
+  margin-bottom: 4rem;
+  color: red;
+  font-size: 0.8rem;
+}
+
+.container #error .sec3 {
+  color: #FF0000;
+  font-size: 0.8rem;
+}
+
+.container #form label {
+  display: block;
+  margin-bottom: 1rem;
+  font-size: 0.8rem;
+}
+
+.container #form input {
+  background: transparent;
+  border: none;
+  border-bottom: 2px #00717F solid;
+  font-size: 0.7rem;
+  outline: none;
+  width: 100%;
+  padding-bottom: 0.5rem;
+}
+
+.container #form .type_user-div {
+  font-size: 0.7rem;
+}
+
+.container #form .type_user-div .type_user {
+  font-size: 0.7rem;
+  margin-top: 1rem;
+  font-weight: normal;
+}
+
+.container #form .type_user--input {
+  width: auto;
+  background: none;
+  height: 0.7rem;
+  margin-right: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.container #form #btn button {
+  position: relative;
+  left: 77%;
+  background: #01403A;
+  color: #FFFFFF;
+  padding: 2.5% 6%;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  font-size: 0.7rem;
+}
+
+.container #link {
+  text-align: center;
+  color: #000000;
+  font-size: 0.8rem;
+}
+
+.container #link a {
+  color: #FFFFFF;
+  text-decoration: none;
+  font-size: 0.7rem;
+}
+
+@media (min-width: 750px) {
+  * {
+    color: #01403A;
+  }
+  body {
+    background: url(../images/desktop-login-background.png), wheat;
+    background-position-y: -150px;
+    background-size: auto;
+  }
+  #sign-in-cont {
+    top: 0;
+    margin: 1.5% 50%;
+  }
+  .container {
+    top: 0;
+    margin: 8% 50%;
+    border-radius: 10px;
+    padding: 2rem;
+    width: 40%;
+    background: #FFFFFF;
+  }
+  .container #error {
+    margin-bottom: 2rem;
+    color: red;
+  }
+  .container #form label {
+    font-weight: bold;
+    font-size: 1rem;
+  }
+  .container #form input {
+    font-size: 0.8rem;
+    border-bottom: 2px #00717F solid;
+  }
+  .container #form .type_user-div {
+    font-size: 1rem;
+  }
+  .container #form .type_user-div .type_user {
+    font-size: 0.9rem;
+    margin-top: 1rem;
+    font-weight: bold;
+  }
+  .container #form .type_user--input {
+    width: auto;
+    background: none;
+    height: 0.8rem;
+    margin-right: 1rem;
+    margin-bottom: 0.5rem;
+  }
+  .container #form #btn {
+    margin-bottom: 1rem;
+  }
+  .container #form #btn button {
+    padding: 2% 6%;
+    font-size: 0.9rem;
+  }
+  .container #link {
+    font-size: 0.9rem;
+  }
+  .container #link a {
+    color: #01403A;
+    font-size: 0.8rem;
+  }
+}
+/*# sourceMappingURL=login.css.map */

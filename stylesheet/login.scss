@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@300&display=swap'); 
+
+$white:#FFFFFF;
+$black:#000000;
+$red:#FF0000;
+$darkgreen:#01403A;
+$mattepersianblue:#00717F;
+
+*{
+    padding:0;
+    margin: 0;
+    font-family: 'Spartan', sans-serif;
+    box-sizing: border-box;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+body{
+    background: url(../images/mobile-login-background.png),wheat;
+    background-size:auto;
+    background-position-y: -200px;
+    color: $white;
+    font-size: 1.8rem;
+}  
+
+.form__input{
+    margin-bottom: 2rem;
+}
+
+#sign-in-cont{
+    top:2em;
+    #error{
+        margin-bottom: 2rem;
+    }
+}
+
+.container{
+    position: relative;
+    top:8em;
+    width: 80%;
+    margin: 0 auto;
+
+     #error{
+        margin-bottom: 4rem;
+        color: red;
+        font-size: 0.8rem;
+        
+        
+        .sec3{
+            color:$red;
+            font-size: 0.8rem;
+        }
+    }
+    
+    #form{
+       
+        label{
+            display: block;
+            margin-bottom: 1rem;
+            font-size: 0.8rem;
+        }
+
+        input{
+            background:transparent;
+            border:none;
+            border-bottom: 2px $mattepersianblue solid;
+            font-size: 0.7rem;
+            outline: none;
+            width: 100%;
+            padding-bottom: 0.5rem;
+        }
+
+        .type_user-div{
+            font-size: 0.7rem;
+            .type_user{
+                font-size: 0.7rem;
+                margin-top: 1rem;
+                font-weight: normal;
+            }
+        }
+
+        .type_user--input{
+            width: auto;
+            background: none;
+            height: 0.7rem;
+            margin-right: 0.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        #btn{
+            button{
+                position: relative;
+                left:77%;
+                background:$darkgreen;
+                color:$white;
+                padding: 2.5% 6%;
+                border: none;
+                border-radius: 50px;
+                cursor: pointer;
+                font-size: 0.7rem;
+            }
+        }
+        
+    }
+
+    #link{
+       text-align: center;
+       color: $black; 
+       font-size: 0.8rem;
+
+       a{
+           color: $white;
+           text-decoration: none;
+           font-size: 0.7rem;
+       }
+    }
+}
+
+
+
+
+
+@media(min-width:750px){
+
+    *{
+        color: $darkgreen;
+    }
+
+    body{
+        background:url(../images/desktop-login-background.png),wheat;
+        background-position-y: -150px;
+        background-size: auto;
+    }
+
+    #sign-in-cont{
+        top:0;
+        margin: 1.5% 50%;
+    }
+
+    .container{ 
+        top:0;
+        margin: 8% 50%;
+        border-radius: 10px;
+        padding: 2rem;
+        width: 40%;
+        background:$white;
+
+        #error{
+            margin-bottom:2rem;
+            color: red;
+        }
+
+        #form{
+            label{
+                font-weight: bold;
+                font-size: 1rem;
+            }
+
+            input{
+                font-size: 0.8rem;
+                border-bottom: 2px $mattepersianblue solid;
+            }
+
+            .type_user-div{
+                font-size: 1rem;
+                .type_user{
+                    font-size: 0.9rem;
+                    margin-top: 1rem;
+                    font-weight: bold;
+                }
+            }
+
+            .type_user--input{
+                width: auto;
+                background: none;
+                height: 0.8rem;
+                margin-right: 1rem;
+                margin-bottom: 0.5rem;
+            }
+
+            #btn{
+                margin-bottom: 1rem;
+                button{
+                    padding: 2% 6%;
+                    font-size: 0.9rem;
+                }
+            }
+        }
+
+        #link{
+            font-size: 0.9rem;
+            a{
+            color: $darkgreen;
+            font-size: 0.8rem;
+            }
+        }
+        
+    }
+}

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../stylesheet/login.css" type="text/css" rel="stylesheet">
+    <link rel="icon" type="image/svg" href="../images/logo-dots.svg">
+    <title>WeConnected | Sign In </title>
+</head>
+<body>
+    <div class="container">
+        <div id="error">
+            Error Message
+        </div>
+
+        <div id="form">
+            <form action="#" method="POST" enctype="multipart/form-data" autocomplete="off" name="form-data" id="form-data">
+                <div class="form__input">
+                    <label for="user">Email address / Username</label>
+                    <input type="text" name="user" placeholder="Enter email address or username" required>
+                </div>
+                <div class="form__input">
+                    <label for="password">Password</label>
+                    <input type="password" name="password" required>
+                </div>
+                <div class="form__input" id="btn">
+                    <button type="submit" name="submit" id="submit">Sign In</button>
+                </div>
+            </form>
+        </div>
+
+        <div id="link">
+            New user?<a href="signup.html">Create an account</a>
+        </div>
+        
+    </div>
+</body>
+</html>
