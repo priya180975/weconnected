@@ -65,6 +65,7 @@ body {
 
 .container #form .type_user-div {
   font-size: 0.7rem;
+  margin-bottom: 1rem;
 }
 
 .container #form .type_user-div .type_user {
@@ -140,6 +141,7 @@ body {
   }
   .container #form .type_user-div {
     font-size: 1rem;
+    margin-bottom: 1rem;
   }
   .container #form .type_user-div .type_user {
     font-size: 0.9rem;

@@ -15,6 +15,7 @@
             
         </div>
 
+
         <div id="form">
             <form action="#" method="post" enctype="multipart/form-data" autocomplete="off" id="form-data" name="form-data">
                 <div class="form__input">
@@ -41,10 +42,14 @@
                 <div class="type_user-div">
                     Select the Type Of User
                     <div class=type_user>
+                        <input type="radio" name="type" class="type_user--input" value="User" required checked>User/Student<br>
                         <input type="radio" name="type" class="type_user--input" value="Teacher" required>Teacher<br>
-                        <input type="radio" name="type" class="type_user--input" value="Committee" required>Committee<br>
-                        <input type="radio" name="type" class="type_user--input" value="User" required>User/Student
+                        <input type="radio" name="type" class="type_user--input" value="Committee" required>Committee
                     </div>
+                </div>
+
+                <div class="chkuser form__input">
+
                 </div>
 
                 <div class="form__input"  id="btn">
