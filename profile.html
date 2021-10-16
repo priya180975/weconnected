@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <link rel="icon" type="image/svg" href="../images/logo-dots.svg">
+    <link rel="stylesheet" type="text/css" href="styles/mainstyle.css">
+    <link rel="stylesheet" type="text/css" href="styles/profileStyle.css">
+    <title>Document</title>
+</head>
+<body>
+    <div id="container">
+        <nav>
+            <div id="logo-div">
+                <img src="images/logo.svg" id="logo" alt="logo-we-connect">
+            </div>
+            <div id="nav-icons">
+                <div id="home-page-icon">
+                    <a href="main.php"><i class="fas fa-home"></i>
+                        <span>Home</span>
+                    </a>
+                </div>
+                <div id="drop-down-menu-div">
+                    <button id="drop-down-menu-btn" class="btn"><i class="fas fa-ellipsis-h"></i></button>
+                </div>
+                <div class="drop-down-menu-items all">
+                    <div class="drop-down-menu-item">
+                        <a href="community.php">
+                            <i class="far fa-heart"></i>
+                            <span>Community</span>
+                        </a>  
+                    </div>
+                    <div class="drop-down-menu-item">
+                        <a href="#">
+                            <i class="far fa-envelope"></i>
+                            <span>Message</span>
+                        </a>  
+                    </div>
+                    <div class="drop-down-menu-item">
+                        <a href="#">
+                            <i class="far fa-user"></i>
+                            <span>Profile</span>
+                        </a>  
+                    </div>
+                    <div class="drop-down-menu-item" id="committee-link-div">
+                        <a href="#" id="committee-link">
+                            <i class="fas fa-user-friends"></i>
+                            <span>Committee</span>
+                        </a>  
+                    </div>
+                    <div class="drop-down-menu-item">
+                        <a href="#">
+                            <i class="far fa-bookmark"></i>
+                            <span>Saved</span>
+                        </a>  
+                    </div>
+                    <div class="drop-down-menu-item" id="filter-div">
+                        <button id="filter" class="btn">
+                            <i class="fas fa-list-ul"></i>
+                            Filter
+                        </button>
+                    </div>
+                    <div class="all filter-options drop-down-menu-item">
+                        <div><input type="radio" name="filter-opt" value="post">post </div>
+                        <div><input type="radio" name="filter-opt" value="question">question</div>
+                        <div><input type="radio" name="filter-opt" value="jc">jc</div>
+                        <div><input type="radio" name="filter-opt" value="jobs">jobs </div>
+                        <div><input type="radio" name="filter-opt" value="all">all</div>
+                        <div><input type="radio" name="filter-opt" value="it-css">it/css</div> 
+                        <div><input type="radio" name="filter-opt" value="committee">committee</div> 
+                    </div>
+                </div>
+                <div id="profile-pic-nav-div">
+                    <img src="images/profile-pic.jpg" alt="profile pic" id="profile-pic-nav">
+                    <span>Me</span>
+                </div>
+            </div>
+        </nav>
+
+        <main>
+
+            <div id="right-desk">
+                <!--profile-->
+                <div id="profile-info-display">
+                    <div class="black"></div>
+                    <div class="centered">
+                        <img src="images/profile-pic.jpg" alt="profile-pic" class="profile-pic">
+                        <div class="profile-info">
+                            
+                            <div class="name">
+                                <!-- <?php 
+                                    if(isset($_SESSION["fullname"]))
+                                    { 
+                                        echo $_SESSION["fullname"];
+                                    }
+                                    else
+                                    {
+                                        echo "Invalid";
+                                    }
+                                ?> -->
+                            </div>
+
+                            <div class="course-student">
+                                <span>Student</span><br>
+                                <span>Course : BSC IT </span>
+                            </div>
+                        </div>
+
+                        <div id="post-btn-div">
+                            <!-- <?php
+                                if(isset($_SESSION["fullname"]))
+                                { 
+                                    echo '<button id="post-btn" class="btn">
+                                            <i class="fas fa-plus"></i>Add a post 
+                                            </button>';
+                                }
+                            ?> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="content-all">
+                <form action="" id="profile__info">
+                    <div class="profile__blocks center--div">
+                        <img src="images/profile-pic.jpg" id="profile__info__image">
+                        <div>
+                            <button>Change pic</button>
+                            <button>Remove pic</button>
+                        </div>
+                    </div>
+                    <div class="profile__blocks profile__info__inputs">
+                        <label for="name">Name</label>
+                        <input type="text">
+                    </div>
+                    <div class="profile__info__inputs profile__blocks">
+                        <label for="profile__type">Type</label>
+                        <select id="profile__type">
+                            <option>Student</option>
+                            <option>Staff</option>
+                            <option>Alumni</option>
+                            <option>Teacher</option>
+                            <option>Committee/department</option>
+                        </select>
+                    </div>
+                    <!-- student teacher alumni -->
+                    <div class="profile__info__inputs profile__blocks display--none" id="user__course__div"> 
+                        <label for="user__course">Course</label>
+                        <select id="user__course">
+                            <option>BSc.IT</option>
+                            <option>BSc.CS</option>
+                            <option>BMM</option>
+                            <option>BCom</option>
+                            <option>BAF</option>
+                        </select>
+                    </div>
+                    <!-- student -->
+                    <div class="profile__info__inputs profile__blocks display--none" id="student__course__year__div">
+                        <label for="student__course__year">Course</label>
+                        <select id="student__course__year">
+                            <option>FY</option>
+                            <option>SY</option>
+                            <option>TY</option>
+                        </select>
+                    </div>
+                    <!--committee/dept-->
+                    <div id="profile__committee__div" class="display--none">
+                        <div class="profile__info__inputs profile__blocks">
+                            <label for="committee__description">Description</label>
+                            <textarea id="committee__description">
+    
+                            </textarea>
+                        </div>
+                        <div class="profile__info__inputs profile__blocks">
+                            <label for="committee__department">Department</label>
+                            <input type="text" id="committee__department">
+                        </div>
+                    </div>
+                    <div class="profile__blocks text--right">
+                        <button id="profile__info__submit">Submit</button>
+                    </div>
+                </form>
+            </div>
+
+            <div id="committee">
+                <div class="black"></div>
+                <div class="centered committee-cont">
+                    <i class="fas fa-user-friends"></i>
+                </div>
+                <div class="all-committee">
+                    <div class="committee">
+                        <span class="committee-side"></span>
+                        <div class="committee-content">
+                            <div class="committee-name">Technobeat</div>
+                            <div class="committee-dept">Department : IT and CS</div>    
+                        </div>
+                    </div>
+                    <div class="committee">
+                        <span class="committee-side"></span>
+                        <div class="committee-content">
+                            <div class="committee-name">Spectrum</div>
+                            <div class="committee-dept">Department : All</div>
+                        </div>
+                    </div>
+                    <div class="committee">
+                        <span class="committee-side"></span>
+                        <div class="committee-content">
+                            <div class="committee-name">Natyakarmi</div>
+                            <div class="committee-dept">Department : All</div>
+                        </div>
+                    </div>
+                    <div class="committee">
+                        <span class="committee-side"></span>
+                        <div class="committee-content">
+                            <div class="committee-name">Panache</div>
+                            <div class="committee-dept">Department : Bcom</div>
+                        </div>
+                    </div>
+                    <!--end of committess-->
+                </div>
+            </div>
+
+        </main>
+    </div>
+
+    <script src="script/profile-script.js"></script>
+</body>
+</html>
