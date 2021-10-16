@@ -65,7 +65,6 @@
         }
     }
 
-
     function usernameExists($conn,$username)
     {
         $sql = mysqli_query($conn, "SELECT * FROM users WHERE username = '{$username}'");
@@ -168,5 +167,47 @@
         }
     }
 
+    //sign in page
 
+    function emptySigninInput($user,$password)
+    {
+        if(empty($user)||empty($password))
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+    
+    function signinUser($conn,$user,$password)
+    {
+        //chk if user exists
+        $sql = mysqli_query($conn, "SELECT * FROM users WHERE email = '{$user}' or username='{$user}'");
+
+        if(mysqli_num_rows($sql)>0)
+        {
+            $result = mysqli_fetch_assoc($sql);
+            $passwordHashed = $result['password'];
+            
+            //chk password
+            $checkpassword=password_verify($password,$passwordHashed);
+
+            if($checkpassword==false)
+            {
+                echo "Incorrect login details";
+            }
+            else
+            {
+                echo "success";
+                $_SESSION['uid'] = $result['uid'];
+            }
+            return true;
+        }
+        else
+        {
+           return false;
+        }
+    }
 ?>
