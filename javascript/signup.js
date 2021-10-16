@@ -6,7 +6,7 @@ form.onsubmit = (e)=>{
   e.preventDefault(); 
 }
 
-
+//check user type
 $(document).ready(function(){
   $('input[name="type"]').change(function(){
     if(this.value=="Teacher"||this.value=="Committee")
@@ -21,6 +21,7 @@ $(document).ready(function(){
   })
 });
 
+//submit form
 submit.onclick = ()=>{
   let xhr = new XMLHttpRequest();
   xhr.open("POST", "../php/signup.php", true);
@@ -28,9 +29,10 @@ submit.onclick = ()=>{
     if(xhr.readyState === XMLHttpRequest.DONE){
       if(xhr.status === 200){
         let data = xhr.response;
+        data=data.trim();
         if(data === "success")
         {
-          location.href="main.php";
+          location.href="../login/signin.html";
         }
         else
         {

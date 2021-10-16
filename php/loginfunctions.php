@@ -103,6 +103,7 @@
         }
     }
 
+    //password and confirm password
     function matchPasswordfail($password,$cpassword)
     {
         if($password!==$cpassword)
@@ -131,11 +132,13 @@
         else if($type=="Committee")
         {
             $uid="C".$random_id;
+            //profile image 
             $profile_img="community-default.jpg";
         }
         else
         {
             $uid="U".$random_id;
+            //profile image 
             $profile_img="user-default.jpg";
         }
 
@@ -157,14 +160,12 @@
             }
             else
             {
-                echo "This email address not Exist!";
                 return false;
             }
         }
         else{
             return false;
         }
-
     }
 
 

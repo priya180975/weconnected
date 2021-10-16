@@ -10,12 +10,15 @@
     $cpassword=$_POST["cpassword"];
     $type=$_POST["type"];
 
+
     //no empty input
     if(!emptySignupInput($name,$email,$username,$password,$cpassword,$type))
     {   
+        //chk user type
         if($type=="Teacher"||$type=="Committee")
         {
             $chk=$_POST["chkuser-pass"];
+            
             if(!emptychkUserPassword($chk))
             {
                 if(!invalidchkUserPassword($chk))
@@ -59,7 +62,7 @@
                             {
                                 if(createUser($conn,$name,$username,$email,$password,$type))
                                 {
-                                    echo "created";
+                                    echo "success";
                                 }
                                 else
                                 {
