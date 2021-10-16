@@ -5,11 +5,11 @@ session_start();
         $heading=$_POST["heading"];
         $content=$_POST["content"];
         $selectTag=$_POST["select-tag"];
-        // $hide=$_POST["show"]
+        $hide=$_POST["show"];
         // $hide2=$_POST["show-no"];
         // $hide1=$_POST["chk1"];
        
-        // echo "hide ".$hide1."\n";
+        echo $hide;
         // echo $selectTag;
         // echo $hide.$hide2;
         
@@ -24,7 +24,7 @@ session_start();
             exit();
         }
 
-        postContent($conn,$heading,$content,$selectTag,$uid);
+        postContent($conn,$heading,$content,$selectTag,$uid,$hide);
     }
     else{
         header("location:../main.php");

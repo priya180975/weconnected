@@ -103,12 +103,21 @@ function backToUp()
 
 //show hide (not implemented)
 let showhide=document.querySelector("#post-show-btn");
-
 showhide.addEventListener("click",change)
 function change()
 {
     showhide.classList.toggle("show-no");
     showhide.classList.contains("show-no")?
-    showhide.setAttribute("name","show-no"):
-    showhide.setAttribute("name","show");
+    showhide.setAttribute("value","1"):
+    showhide.setAttribute("value","0");
+}
+
+//question
+document.querySelector(".ques").addEventListener("click",change1)
+function change1()
+{
+    showhide.classList.toggle("show-no");
+    showhide.classList.contains("show-no")?
+    showhide.setAttribute("value","1"):
+    showhide.setAttribute("value","0");
 }

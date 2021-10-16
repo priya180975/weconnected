@@ -17,15 +17,15 @@
         <?php include_once 'nav.php'; ?>
         
         <main>
-        <?php 
-            if(isset($_GET["error"]))
-            {
-                if($_GET["error"]=="emptyInput")
-                {
-                    echo "Post not submitted";
-                }
-            }
-        ?>
+        <!-- <?php 
+            // if(isset($_GET["error"]))
+            // {
+            //     if($_GET["error"]=="emptyInput")
+            //     {
+            //         echo "Post not submitted";
+            //     }
+            // }
+        ?> -->
 
             <div id="right-desk">
                 <!--profile-->
@@ -386,7 +386,8 @@
             <!-- <input type="checkbox" class="btn show" id="post-show-btn" name="show">
             <input type="checkbox" name="chk1">   -->
                 <button type="submit" id="posted-content" name="submit" class="btn"><i class="far fa-paper-plane"></i></button>
-                <div  class="btn show"  id="post-show-btn"></div>
+                <input class="btn show"  id="post-show-btn" name="show" value="0">
+                <input class="btn ques" name="ques" value="0">
             </div>
 
         </div>
