@@ -17,7 +17,7 @@ submit.onclick = ()=>{
         data=data.trim();
         if(data === "success")
         {
-          location.href="../main/main.html";
+          location.href="../main/main.php";
         }
         else
         {
