@@ -1,0 +1,97 @@
+*{
+    font-family: 'Spartan', sans-serif;
+    font-weight: bold;
+}
+
+main #profile-info-display{
+    top:5rem;
+    position: sticky;
+}
+
+#content-all{
+    border-radius: 1rem;
+    background: #EDF1FF;
+
+    form{
+        // background: pink;
+        top: -2rem;
+        text-align: left;
+        padding: 0 1rem;
+
+        .none{
+            display: none;
+        }
+
+        .error{
+            font-size: 0.8rem;
+        }
+
+        .form__input{
+            padding: 0.5rem;
+        
+            label{
+                font-size: 0.9rem;
+            }
+
+            select{
+                background: none;
+                border: none;
+                outline: none;
+                border-bottom: 2px rgb(0, 0, 0) solid;
+                font-size: 0.7rem;
+                outline: none;
+                width: 100%;
+                padding-bottom: 0.5rem;
+                margin-top: 0.2rem;
+            }
+
+            input[type="text"]{
+                background:transparent;
+                border:none;
+                border-bottom: 2px rgb(0, 0, 0) solid;
+                font-size: 0.7rem;
+                outline: none;
+                width: 100%;
+                padding-bottom: 0.5rem;
+            }
+
+            input[type="text"]:read-only{
+                color: #c5c5c5;
+                border-bottom: 2px #cecece solid;
+            }
+        }
+
+        
+        .btn_div{
+            text-align: right;
+            #submit{
+                background: black;
+                color:#fff;
+                padding: 0.7rem;
+                border-radius: 1rem;
+                font-size: 0.7rem;
+                cursor: pointer;
+            }
+        }
+
+        .img_change{
+            display: flex;
+            .img_btn{
+                margin-right: 1rem;
+                background: black;
+                color:#fff;
+                padding: 0.4rem;
+                cursor: pointer;
+                font-size: 0.6rem;
+                width: max-content;
+            }
+        }
+    } 
+}
+
+#profile-img{
+    border: 2px solid #EDF1FF;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}

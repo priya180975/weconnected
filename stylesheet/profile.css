@@ -1,0 +1,108 @@
+* {
+  font-family: 'Spartan', sans-serif;
+  font-weight: bold;
+}
+
+main #profile-info-display {
+  top: 5rem;
+  position: -webkit-sticky;
+  position: sticky;
+}
+
+#content-all {
+  border-radius: 1rem;
+  background: #EDF1FF;
+}
+
+#content-all form {
+  top: -2rem;
+  text-align: left;
+  padding: 0 1rem;
+}
+
+#content-all form .none {
+  display: none;
+}
+
+#content-all form .error {
+  font-size: 0.8rem;
+}
+
+#content-all form .form__input {
+  padding: 0.5rem;
+}
+
+#content-all form .form__input label {
+  font-size: 0.9rem;
+}
+
+#content-all form .form__input select {
+  background: none;
+  border: none;
+  outline: none;
+  border-bottom: 2px black solid;
+  font-size: 0.7rem;
+  outline: none;
+  width: 100%;
+  padding-bottom: 0.5rem;
+  margin-top: 0.2rem;
+}
+
+#content-all form .form__input input[type="text"] {
+  background: transparent;
+  border: none;
+  border-bottom: 2px black solid;
+  font-size: 0.7rem;
+  outline: none;
+  width: 100%;
+  padding-bottom: 0.5rem;
+}
+
+#content-all form .form__input input[type="text"]:-moz-read-only {
+  color: #c5c5c5;
+  border-bottom: 2px #cecece solid;
+}
+
+#content-all form .form__input input[type="text"]:read-only {
+  color: #c5c5c5;
+  border-bottom: 2px #cecece solid;
+}
+
+#content-all form .btn_div {
+  text-align: right;
+}
+
+#content-all form .btn_div #submit {
+  background: black;
+  color: #fff;
+  padding: 0.7rem;
+  border-radius: 1rem;
+  font-size: 0.7rem;
+  cursor: pointer;
+}
+
+#content-all form .img_change {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#content-all form .img_change .img_btn {
+  margin-right: 1rem;
+  background: black;
+  color: #fff;
+  padding: 0.4rem;
+  cursor: pointer;
+  font-size: 0.6rem;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+}
+
+#profile-img {
+  border: 2px solid #EDF1FF;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+/*# sourceMappingURL=profile.css.map */
