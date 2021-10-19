@@ -385,6 +385,24 @@ main #committee {
   top: 8rem;
 }
 
+.post-content .after-post {
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: green;
+}
+
+.post-content .after-post button {
+  background: black;
+  color: #fff;
+  padding: 1rem;
+}
+
+.post-content #error {
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
 .post-content .content-heading {
   position: relative;
 }
