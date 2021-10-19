@@ -281,15 +281,19 @@ main #committee {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  font-size: 0.65rem;
 }
 
 .temp .content-profile-info .content-tag {
+  background: #EDF1FF;
   padding: 0.5rem 1rem;
 }
 
 .temp .content-text {
   font-size: 0.8rem;
   font-weight: bold;
+  white-space: pre-wrap;
+  word-break: break-all;
 }
 
 .temp button, .temp select {
