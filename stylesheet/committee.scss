@@ -1,0 +1,41 @@
+#content-all{
+    grid-column: 1/3 !important;
+}
+
+main #committee{
+    background: none;
+    .all-committee{
+        padding: 0;
+    }
+}
+
+.committee:first-child {
+    margin-top: 0 !important;
+}
+
+
+.committee{
+    grid-template-columns: 0.1fr 4fr 0.4fr !important;
+    background: #edf1ff !important;
+    .committee-side {
+        background: #212121 !important;
+    }
+    .committee-content{
+        display: flex;
+        .committee-name-desc {
+            display: flex;
+            flex-direction: column;
+            padding: 1rem;
+            .committee-name {
+                margin-bottom: 0.5rem;
+            }
+        }
+    }
+    .committee-img{
+        img{
+            width:100px;
+            height:100px;
+            border-radius: 50%;
+        }
+    }
+}

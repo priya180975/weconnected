@@ -1,0 +1,55 @@
+#content-all {
+  -ms-grid-column: 1 !important;
+  -ms-grid-column-span: 2 !important;
+  grid-column: 1/3 !important;
+}
+
+main #committee {
+  background: none;
+}
+
+main #committee .all-committee {
+  padding: 0;
+}
+
+.committee:first-child {
+  margin-top: 0 !important;
+}
+
+.committee {
+  -ms-grid-columns: 0.1fr 4fr 0.4fr !important;
+      grid-template-columns: 0.1fr 4fr 0.4fr !important;
+  background: #edf1ff !important;
+}
+
+.committee .committee-side {
+  background: #212121 !important;
+}
+
+.committee .committee-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.committee .committee-content .committee-name-desc {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 1rem;
+}
+
+.committee .committee-content .committee-name-desc .committee-name {
+  margin-bottom: 0.5rem;
+}
+
+.committee .committee-img img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+/*# sourceMappingURL=committee.css.map */

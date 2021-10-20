@@ -47,6 +47,8 @@
     <?php include_once 'posttemplate.php' ?>
 
     <script src="../javascript/main.js"></script>
-    
+    <script src="../javascript/posttemplate.js"></script>
+    <script src="../javascript/committee.js"></script>
+
 </body>
 </html>
