@@ -1,0 +1,6 @@
+#content-all {
+  -ms-grid-column: 1 !important;
+  -ms-grid-column-span: 2 !important;
+  grid-column: 1/3 !important;
+}
+/*# sourceMappingURL=community.css.map */

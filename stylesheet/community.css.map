@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,YAAY,CAAA;EACR,WAAW,EAAE,cAAc;CAC9B",
+    "sources": [
+        "community.scss"
+    ],
+    "names": [],
+    "file": "community.css"
+}
