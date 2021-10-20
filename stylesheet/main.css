@@ -647,18 +647,25 @@ main #committee {
   }
   main #committee .all-committee .committee .committee-content {
     padding: 0.8rem;
+    padding-right: 0;
     font-size: 1rem;
     font-weight: bold;
   }
   main #committee .all-committee .committee .committee-content .committee-dept {
     font-size: 0.7rem;
     margin-right: 2rem;
+    white-space: pre-wrap;
+    word-break: break-all;
+    word-wrap: normal;
   }
   main #committee .all-committee .committee button {
     cursor: pointer;
     height: -webkit-max-content;
     height: -moz-max-content;
     height: max-content;
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
   }
   main #committee .all-committee .committee button i {
     pointer-events: all;

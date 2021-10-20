@@ -628,17 +628,22 @@ main{
                     }
                     .committee-content{
                         padding: 0.8rem;
+                        padding-right: 0;
                         font-size: 1rem;
                         font-weight: bold;
                         
                         .committee-dept{
                             font-size: 0.7rem;
                             margin-right: 2rem;
+                            white-space: pre-wrap;
+                            word-break: break-all;
+                            word-wrap:normal;
                         }
                     }
                     button{
                         cursor: pointer;
                         height: max-content;
+                        width: max-content;
                         i{
                             pointer-events: all;
                             font-size: 1.2rem;
@@ -649,5 +654,4 @@ main{
         }
     }
 }
-
 
