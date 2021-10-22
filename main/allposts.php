@@ -1,5 +1,7 @@
 <?php
+include_once "../php/config.php";
 include_once "../php/getPostfunction.php";
+//include_once "../php/savedfunctions.php";
 
     $posts=getallPosts($conn,$_SESSION['uid']);      
     foreach($posts as $key => $pid)
@@ -13,6 +15,7 @@ include_once "../php/getPostfunction.php";
                 <div class="content-profile-pic"><img src="'.getPostImage($conn,$pid).'" alt="profile-pic"></div>
                 <div class="content-profile-name">
                     <span>'.getPostName($conn,$pid).'</span>
+                    <span style="font-weight:bold">'.getPostUsername($conn,$pid).'</span>
                     <span>'.getTimeStamp($conn,$pid).'</span>
                 </div>                        
             </div>
@@ -22,10 +25,10 @@ include_once "../php/getPostfunction.php";
     </div>
     <div class="content-interact">
         <div class="content-interact-save">
-            <button class="btn"><i class="far fa-bookmark"></i></button>
+            <button class="btn save-btn" ><i class="far fa-bookmark"></i></button>
         </div>
         <div class="content-interact-comment">
-            <div class="comment">
+            <div class="comment" >
             <button class="btn"><i class="far fa-comment-alt"></i></button>
             <span>3</span>
             </div>

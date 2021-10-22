@@ -151,4 +151,18 @@
         return getName($conn,getPostUid($conn,$pid));
     }
 
+    function getPostUsername($conn,$pid)
+    {
+        $p_uid=getPostUid($conn,$pid);
+        $sql=mysqli_query($conn,"SELECT username FROM users WHERE uid='{$p_uid}';");
+        if(mysqli_num_rows($sql)>0)
+        {
+            $result = mysqli_fetch_assoc($sql);
+            return $result['username'];
+        }
+        else
+        {
+            return "invalid";
+        }
+    }
 ?>
