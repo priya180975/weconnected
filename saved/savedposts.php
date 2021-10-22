@@ -1,9 +1,8 @@
 <?php
-include_once "../php/getCommunityPosts.php";
-include_once "../php/getPostfunction.php";
 include_once "../php/savedfunctions.php";
+include_once "../php/getPostfunction.php";
 
-    $posts=getCommunityPosts($conn,$_SESSION['uid']);     
+    $posts=allSavedPosts($conn,$_SESSION['uid']);     
 
     if($posts)
     {
@@ -42,10 +41,10 @@ include_once "../php/savedfunctions.php";
         </div>
         ';
     }
-}
+}   
 else
 {
-    echo "No posts yet Join a committee";
+    echo "No saved posts";
 }
 
 

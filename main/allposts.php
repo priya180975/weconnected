@@ -1,7 +1,7 @@
 <?php
 include_once "../php/config.php";
 include_once "../php/getPostfunction.php";
-//include_once "../php/savedfunctions.php";
+include_once "../php/savedfunctions.php";
 
     $posts=getallPosts($conn,$_SESSION['uid']);      
     foreach($posts as $key => $pid)
@@ -25,7 +25,7 @@ include_once "../php/getPostfunction.php";
     </div>
     <div class="content-interact">
         <div class="content-interact-save">
-            <button class="btn save-btn" ><i class="far fa-bookmark"></i></button>
+            <button class="btn save-btn" ><i class="far '.saved_Not($conn,$_SESSION['uid'],$pid).' fa-bookmark"></i></button>
         </div>
         <div class="content-interact-comment">
             <div class="comment" >

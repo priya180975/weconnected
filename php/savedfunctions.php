@@ -40,7 +40,27 @@
         }
     }
 
-   
+    function allSavedPosts($conn,$uid)
+    {
+        $sql=mysqli_query($conn,"SELECT pid FROM saved WHERE uid='{$uid}';");
+
+        if(mysqli_num_rows($sql)>0)
+        {
+            $solution = array();
+            $result=mysqli_num_rows($sql);
+      
+            while ($row = mysqli_fetch_assoc($sql))
+            {
+                $solution[]=$row['pid'];
+            }
+
+            return $solution;
+        }
+        else
+        {
+            return "";
+        }
+    }
 
 
 ?>
