@@ -16,7 +16,6 @@
         }
     }
 
-
     function allComments($conn,$pid)
     {
         $sql=mysqli_query($conn,"SELECT * FROM comment WHERE c_pid='{$pid}';");
@@ -35,6 +34,20 @@
         else
         {
             return "";
+        }
+    }
+
+    function countComments($conn,$pid)
+    {
+        $sql=mysqli_query($conn,"SELECT * FROM comment WHERE c_pid='{$pid}';");
+        if(mysqli_num_rows($sql)>0)
+        {
+            $result=mysqli_num_rows($sql);
+            return $result;
+        }
+        else
+        {
+            return 0;
         }
     }
 
