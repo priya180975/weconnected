@@ -623,32 +623,35 @@ main #committee {
     border-radius: 50%;
     border: 2px solid #F9FAFE;
   }
+  main #committee .all-committee::-webkit-scrollbar {
+    width: 0.2rem;
+  }
+  main #committee .all-committee::-webkit-scrollbar-thumb {
+    background-color: #e7e7e7;
+  }
   main #committee .all-committee {
     padding: 1rem;
+    overflow: auto;
+    height: 80vh;
+    padding-bottom: 3rem;
   }
   main #committee .all-committee .committee {
-    background: rgba(255, 199, 0, 0.35);
+    background: #EDF1FF;
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: 0.1fr 2fr 0.4fr;
         grid-template-columns: 0.1fr 2fr 0.4fr;
-    border-radius: 15px;
+    border-radius: 10px;
     margin: 1rem 0;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
     pointer-events: none;
   }
-  main #committee .all-committee .committee .committee-side {
-    background: rgba(255, 199, 0, 0.7);
-    padding: 0.5rem;
-    border-radius: 1rem 0 0 1rem;
-    height: 100%;
-  }
   main #committee .all-committee .committee .committee-content {
     padding: 0.8rem;
     padding-right: 0;
-    font-size: 1rem;
+    font-size: 0.8rem;
     font-weight: bold;
   }
   main #committee .all-committee .committee .committee-content .committee-dept {
