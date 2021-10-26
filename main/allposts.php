@@ -2,6 +2,7 @@
 include_once "../php/config.php";
 include_once "../php/getPostfunction.php";
 include_once "../php/savedfunctions.php";
+include_once "../php/commentfunctions.php";
 
     $posts=getallPosts($conn,$_SESSION['uid']);      
     foreach($posts as $key => $pid)
@@ -29,13 +30,29 @@ include_once "../php/savedfunctions.php";
         </div>
         <div class="content-interact-comment">
             <div class="comment" >
-            <button class="btn"><i class="far fa-comment-alt"></i></button>
-            <span>3</span>
+                <button class="btn"><i class="fas fa-plus-circle add-comment-btn"></i></button>
+                <button class="btn"><i class="far fa-comment-alt comment-btn"></i></button>
+                <span>3</span>
             </div>
             <div class="show '.getPostHideShow($conn,$pid).'"></div>
             <div class="post_q">'.getPostQues($conn,$pid).'</div>
         </div>
     </div>
+    <div class="comments-display comments-hide">';
+    $comments= allComments($conn,$pid);   
+    // print_r($comments);  
+    if($comments)
+    {
+        foreach($comments as $key=>$cid)
+        {
+            include "../comments/comments.php"; 
+        }
+    }
+    else
+    {
+        echo '<div class="content-text">No comments yet</div>';
+    }
+    echo'</div>
 </div>
 ';
 }

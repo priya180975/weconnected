@@ -383,35 +383,35 @@ main #committee {
   cursor: pointer;
 }
 
-.post-content {
+.post-content, .comment-content {
   position: absolute;
   width: 100%;
   top: 8rem;
 }
 
-.post-content .after-post {
+.post-content .after-post, .comment-content .after-post {
   text-align: center;
   font-size: 1.2rem;
   font-weight: bold;
   color: green;
 }
 
-.post-content .after-post button {
+.post-content .after-post button, .comment-content .after-post button {
   background: black;
   color: #fff;
   padding: 1rem;
 }
 
-.post-content #error {
+.post-content #error, .post-content #comment-error, .comment-content #error, .comment-content #comment-error {
   font-size: 0.8rem;
   font-weight: bold;
 }
 
-.post-content .content-heading {
+.post-content .content-heading, .comment-content .content-heading {
   position: relative;
 }
 
-.post-content .content-heading #heading {
+.post-content .content-heading #heading, .comment-content .content-heading #heading {
   width: 100%;
   padding: 0.5rem;
   font-family: 'Spartan', sans-serif;
@@ -421,18 +421,18 @@ main #committee {
   font-size: 1rem;
 }
 
-.post-content .content-tag {
+.post-content .content-tag, .comment-content .content-tag {
   padding: 0.2rem !important;
 }
 
-.post-content .content-tag select {
+.post-content .content-tag select, .comment-content .content-tag select {
   padding: 0.2rem 1rem;
   border: none;
   background-color: rgba(255, 143, 0, 0.2);
   outline: none;
 }
 
-.post-content .content-text #content {
+.post-content .content-text #content, .comment-content .content-text #content {
   width: 100%;
   border: none;
   outline: none;
@@ -441,12 +441,12 @@ main #committee {
   height: 6rem;
 }
 
-.post-content .content-interact #cancel {
+.post-content .content-interact #cancel, .post-content .content-interact #cancel-comment, .comment-content .content-interact #cancel, .comment-content .content-interact #cancel-comment {
   color: #fff;
   font-family: 'Spartan', sans-serif;
 }
 
-.post-content .content-interact #posted-content {
+.post-content .content-interact #posted-content, .comment-content .content-interact #posted-content {
   margin-right: 1rem;
 }
 
@@ -538,7 +538,7 @@ main #committee {
   #back-to-top-div {
     margin: 0 30%;
   }
-  .post-content {
+  .post-content, .comment-content {
     width: 50%;
     margin: 0 25%;
   }

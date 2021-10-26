@@ -350,7 +350,7 @@ main{
     }
 }
 
-.post-content{
+.post-content,.comment-content{
     position: absolute;
     width: 100%;
     top:8rem;
@@ -369,7 +369,7 @@ main{
     }
     
 
-    #error{
+    #error,#comment-error{
         font-size: 0.8rem;
         font-weight: bold;
     }
@@ -409,7 +409,7 @@ main{
     }
 
     .content-interact{
-        #cancel{
+        #cancel,#cancel-comment{
             color: #fff;
             font-family: 'Spartan', sans-serif;
         }
@@ -523,7 +523,7 @@ main{
         margin: 0 30%;
     }
     
-    .post-content{
+    .post-content,.comment-content{
         width: 50%;
         margin: 0 25%;
     }

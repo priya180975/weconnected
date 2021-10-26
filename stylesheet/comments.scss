@@ -1,0 +1,16 @@
+.comments-hide{
+    display: none !important;
+}
+
+.comments-display{
+    background: #edf1ff;
+    display: block;
+    border-bottom: 0.2rem solid #212121;
+    .content-padding{
+        border-bottom: 0.2rem solid #212121;
+    }
+}
+
+.border-radius0{
+    border-radius: 0  !important;
+}
