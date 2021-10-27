@@ -1,0 +1,82 @@
+main {
+  -ms-grid-columns: 25% 75%;
+      grid-template-columns: 25% 75%;
+  height: 85vh;
+}
+
+main a {
+  text-decoration: none;
+  color: black;
+}
+
+#container input {
+  width: 100%;
+  font-family: 'Spartan', sans-serif;
+  outline: none;
+  background: none;
+}
+
+#search-users {
+  padding: 1rem;
+  background: #EDF1FF;
+}
+
+#search-users input {
+  padding: 0.6rem;
+  border: 0.1rem solid #212121;
+}
+
+#search-users #search-result .search-data {
+  border: 1px solid #212121;
+  border-radius: 0.5rem;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 0.8rem;
+  padding: 0.5rem 0.3rem;
+  margin: 0.5rem 0;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#search-users #search-result .search-data img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 0.5rem;
+}
+
+#chat-window {
+  padding: 1rem;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+#chat-window #chat-display {
+  padding: 1rem;
+  background: brown;
+}
+
+#chat-window #chat-content {
+  bottom: 10px;
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 70%;
+}
+
+#chat-window #chat-content input {
+  width: 95%;
+  padding: 0.6rem;
+  border: 0.1rem solid #212121;
+  font-weight: bold;
+}
+
+#chat-window #chat-content button {
+  margin-left: 1rem;
+  cursor: pointer;
+}
+/*# sourceMappingURL=message.css.map */

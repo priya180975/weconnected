@@ -269,7 +269,7 @@ main{
         font-size: 0.8rem;
         font-weight: bold;
         white-space: pre-wrap;
-        word-break: break-all
+        word-break: break-word;
     }
     
     button,select{
@@ -570,6 +570,7 @@ main{
                     div{
                         padding: 0.5rem 0;
                         font-weight: bold;
+                        font-size: 0.8rem;
                         
                         input{
                             margin-right: 0.5rem;
@@ -615,7 +616,7 @@ main{
             .all-committee::-webkit-scrollbar-thumb {
                 background-color: #e7e7e7;
             }
-            
+
             .all-committee{
                 padding: 1rem;
                 overflow: auto;

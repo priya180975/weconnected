@@ -293,7 +293,7 @@ main #committee {
   font-size: 0.8rem;
   font-weight: bold;
   white-space: pre-wrap;
-  word-break: break-all;
+  word-break: break-word;
 }
 
 .temp button, .temp select {
@@ -588,6 +588,7 @@ main #committee {
   main #right-desk .filter-options .filter-desk-data div {
     padding: 0.5rem 0;
     font-weight: bold;
+    font-size: 0.8rem;
   }
   main #right-desk .filter-options .filter-desk-data div input {
     margin-right: 0.5rem;
