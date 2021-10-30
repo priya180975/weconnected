@@ -1,6 +1,9 @@
 main {
-  -ms-grid-columns: 25% 75%;
-      grid-template-columns: 25% 75%;
+  -ms-grid-columns: 25% 73%;
+      grid-template-columns: 25% 73%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   height: 85vh;
 }
 
@@ -18,7 +21,7 @@ main a {
 
 #search-users {
   padding: 1rem;
-  background: #EDF1FF;
+  background: #F9FAFE;
 }
 
 #search-users input {
@@ -27,14 +30,15 @@ main a {
 }
 
 #search-users #search-result .search-data {
-  border: 1px solid #212121;
   border-radius: 0.5rem;
   width: 100%;
+  background: #EDF1FF;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  font-size: 0.8rem;
-  padding: 0.5rem 0.3rem;
+  font-size: 0.7rem;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
   margin: 0.5rem 0;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -49,23 +53,53 @@ main a {
 }
 
 #chat-window {
-  padding: 1rem;
+  max-height: 85vh;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 92% 8%;
+      grid-template-rows: 92% 8%;
+  border-bottom: 0;
+}
+
+#chat-window #chat-display::-webkit-scrollbar {
+  width: 0.2rem;
+}
+
+#chat-window #chat-display::-webkit-scrollbar-thumb {
+  background-color: #e7e7e7;
 }
 
 #chat-window #chat-display {
-  padding: 1rem;
-  background: brown;
+  overflow: auto;
+}
+
+#chat-window #chat-display .messages .message-content {
+  font-size: 0.8rem;
+  margin: 1rem;
+  padding: 0.5rem 0rem;
+}
+
+#chat-window #chat-display .messages .message-content span {
+  padding: 0.5rem 1rem;
+  border: 1px solid #212121;
+  background: #EDF1FF;
+}
+
+#chat-window #chat-display .messages .send {
+  background: none;
+  text-align: right;
+}
+
+#chat-window #chat-display .message-receive {
+  border: 1px solid rebeccapurple;
 }
 
 #chat-window #chat-content {
-  bottom: 10px;
-  position: absolute;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 70%;
 }
 
 #chat-window #chat-content input {
@@ -76,7 +110,7 @@ main a {
 }
 
 #chat-window #chat-content button {
-  margin-left: 1rem;
+  margin-left: 0.5rem;
   cursor: pointer;
 }
 /*# sourceMappingURL=message.css.map */

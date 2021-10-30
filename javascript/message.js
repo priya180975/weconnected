@@ -16,7 +16,7 @@ searchUser.onkeyup=()=>{
           }
       }
     }
-    xhr.open("POST", "../php/message.php", true);
+    xhr.open("POST", "../php/messageusers.php", true);
     xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
     xhr.send("searchTerm=" + searchTerm);
 }
