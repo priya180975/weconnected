@@ -13,23 +13,48 @@
             return "invalid";
         }
     }
-    
-    function getallPosts($conn,$uid)
+
+    function getallPosts($conn,$uid,$filter="all")
     {
-        if(getUserType($conn,$uid)=="Teacher")
+        if($filter=="all")
         {
-            $sql=mysqli_query($conn,"SELECT * FROM post WHERE hide_show='show' ORDER BY timestamp DESC;");
+            if(getUserType($conn,$uid)=="Teacher")
+            {
+                $sql=mysqli_query($conn,"SELECT * FROM post WHERE hide_show='show' ORDER BY timestamp DESC;");
+            }
+            else
+            {
+                $sql=mysqli_query($conn,"SELECT * FROM post ORDER BY timestamp DESC;");
+            }
+        }
+        else if($filter=="post"||$filter=="question")
+        {
+            if(getUserType($conn,$uid)=="Teacher")
+            {
+                $sql=mysqli_query($conn,"SELECT * FROM post WHERE hide_show='show' AND post_ques='{$filter}' ORDER BY timestamp DESC;");
+            }
+            else
+            {
+                $sql=mysqli_query($conn,"SELECT * FROM post WHERE post_ques='{$filter}' ORDER BY timestamp DESC;");
+            }
         }
         else
         {
-            $sql=mysqli_query($conn,"SELECT * FROM post ORDER BY timestamp DESC;");
+            if(getUserType($conn,$uid)=="Teacher")
+            {
+                $sql=mysqli_query($conn,"SELECT * FROM post WHERE hide_show='show' AND topic_name='{$filter}' ORDER BY timestamp DESC;");
+            }
+            else
+            {
+                $sql=mysqli_query($conn,"SELECT * FROM post WHERE topic_name='{$filter}' ORDER BY timestamp DESC;");
+            }
         }
 
         if(mysqli_num_rows($sql)>0)
         {
             $solution = array();
             $result=mysqli_num_rows($sql);
-      
+    
             while ($row = mysqli_fetch_assoc($sql))
             {
                 $solution[]=$row['pid'];
@@ -41,6 +66,7 @@
         {
             return "invalid";
         }
+    
     }
 
     function getPostTitle($conn,$pid)

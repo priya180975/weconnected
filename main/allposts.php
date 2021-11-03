@@ -4,7 +4,17 @@ include_once "../php/getPostfunction.php";
 include_once "../php/savedfunctions.php";
 include_once "../php/commentfunctions.php";
 
-    $posts=getallPosts($conn,$_SESSION['uid']);      
+
+    if(isset($_GET["filter"]))
+    {
+        $filter=$_GET["filter"];
+    }
+    else
+    {
+        $filter="all";
+    }
+
+    $posts=getallPosts($conn,$_SESSION['uid'],$filter);      
     foreach($posts as $key => $pid)
     {
         echo'
