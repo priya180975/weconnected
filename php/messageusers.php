@@ -13,23 +13,22 @@
     {
         $name=getUsers($conn,$_SESSION['uid'],$searchTerm);
 
+        $url=$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
         if($name)
         {
         foreach($name as $key => $uid)
             {
-                echo '<a href="../php/chatdetails.php?username='.getUsername($conn,$uid).'" value="'.getUsername($conn,$uid).'">
-                <div class="search-data">
+                echo '<div class="search-data" value="'.getUsername($conn,$uid).'">
                         <div class="search-img"><img src="'.getImage($conn,$uid).'" alt="'.getUsername($conn,$uid).'-profile-image"></div>
                         <div class="search-user-type">
                             <div class="search-username">'.getUsername($conn,$uid).'</div>
                             <div class="search-user-type">'.getUserType($conn,$uid).'</div>
                         </div>
-                    </div></a>';
+                    </div>';
             }
         }
         else
         {
-            //echo '<div class="search-usernames">no user found</div>';
             echo "no user found";
         }
     }

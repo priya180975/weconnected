@@ -118,12 +118,12 @@ main{
         }
     }
 
+    // .none{
+    //     display: none !important;
+    // }
+
     #chat-content{
-        //border:1px solid pink;
-        // bottom:10px;
-        // position: absolute;
-        display: flex;
-        // width: 70%;
+       display: flex;
 
         input{
             width: 95%;
