@@ -23,8 +23,13 @@
         <main>
 
             <div id="right-desk">
-                <!--profile display-->
-                <?php include_once '../main/profiledisplay.php' ?>
+                <!--profile-->
+                <div id="profile-info-display">
+                    <div class="black"></div>
+                    <div class="centered">
+                        <?php include_once '../main/profiledisplay-content.php'?>
+                    </div>
+                </div> 
             </div>
 
             <div id="content-all">
