@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
     <link rel="icon" type="image/svg" href="../images/logo-dots.svg">
     <link rel="stylesheet" type="text/css" href="../stylesheet/main.css">
+    <link rel="stylesheet" type="text/css" href="../stylesheet/comments.css">
     <title>WeConnected | Main Page</title>
 </head>
 <body>
@@ -16,7 +17,7 @@
        
         <!--nav bar-->
         <?php include_once 'navbar.php'; ?>
-         
+            
         <main>
             <div id="right-desk">
                 <!--profile-->
@@ -45,10 +46,13 @@
 
     <!--Post template-->
     <?php include_once 'posttemplate.php' ?>
+    <?php include_once  "../comments/commenttemplate.php"?>
 
     <script src="../javascript/main.js"></script>
     <script src="../javascript/posttemplate.js"></script>
     <script src="../javascript/committee.js"></script>
-
+    <script src="../javascript/saved.js"></script>
+    <script src="../javascript/comment.js"></script>
+    
 </body>
 </html>
