@@ -1,22 +1,3 @@
-//comments
-document.querySelectorAll(".comment-btn").forEach(a=>a.addEventListener("click",showcomment));
-
-function showcomment(e)
-{
-    let postDiv=e.target.parentElement.parentElement.parentElement.parentElement.parentElement;
-    let commentDiv=postDiv.querySelector(".comments-display");
-
-    if(commentDiv.classList.contains("comments-hide"))
-    {
-        commentDiv.classList.remove("comments-hide");   
-        postDiv.querySelector(".content-interact").classList.add("border-radius0");
-    }
-    else
-    {
-        commentDiv.classList.add("comments-hide");   
-        postDiv.querySelector(".content-interact").classList.remove("border-radius0");
-    }
-}
 
 //add comment 
 let commentTemplate=document.querySelector("#comment-data");

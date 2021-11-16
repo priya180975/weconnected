@@ -48,9 +48,11 @@
     <?php include_once  "../comments/commenttemplate.php"?>
 
     <script src="../javascript/main.js"></script>
+    <script src="../javascript/homepage.js"></script>
     <script src="../javascript/posttemplate.js"></script>
     <script src="../javascript/committee.js"></script>
     <script src="../javascript/saved.js"></script>
+    <script src="../javascript/displaycomment.js"></script>
     <script src="../javascript/comment.js"></script>
     
 </body>
