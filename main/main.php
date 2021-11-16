@@ -12,7 +12,6 @@
     <title>WeConnected | Main Page</title>
 </head>
 <body>
-
     <div id="container">
        
         <!--nav bar-->

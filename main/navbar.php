@@ -5,6 +5,12 @@
     include_once "../php/mainfunctions.php";
     include_once "../php/config.php";
 
+    if(!isset($_SESSION['uid']) && empty($_SESSION['uid'])) 
+    {
+        header("location: ../login/signin.html");
+        exit();
+    }
+
     echo 
     '
     <nav>

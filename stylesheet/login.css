@@ -53,6 +53,11 @@ body {
   font-size: 0.8rem;
 }
 
+.container #form label span {
+  font-size: 0.6rem;
+  color: red;
+}
+
 .container #form input {
   background: transparent;
   border: none;

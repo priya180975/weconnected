@@ -58,6 +58,10 @@ body{
             display: block;
             margin-bottom: 1rem;
             font-size: 0.8rem;
+            span{
+                font-size: 0.6rem;
+                color: red;
+            }
         }
 
         input{

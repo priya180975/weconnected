@@ -32,7 +32,7 @@ submit.onclick = ()=>{
         data=data.trim();
         if(data === "success")
         {
-          location.href="../login/signin.html";
+          location.href="../main/main.php";
         }
         else
         {
