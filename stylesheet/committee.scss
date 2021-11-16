@@ -6,6 +6,10 @@ main #committee{
     background: none;
     .all-committee{
         padding: 0;
+        height: auto;
+        .committee{
+            // display: block;
+        }
     }
 }
 
@@ -19,6 +23,9 @@ main #committee{
     background: #edf1ff !important;
     .committee-side {
         background: #212121 !important;
+        padding: 1rem;
+        height: 100%;
+        border-radius: 10px 0 0 10px;
     }
     .committee-content{
         display: flex;
@@ -38,4 +45,8 @@ main #committee{
             border-radius: 50%;
         }
     }
+}
+
+main {
+    //display: block;
 }

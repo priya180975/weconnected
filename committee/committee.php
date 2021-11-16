@@ -21,7 +21,6 @@
         ?>
 
         <main>
-
             <div id="right-desk">
                 <!--profile-->
                 <div id="profile-info-display">
@@ -45,7 +44,7 @@
                     {
                         echo '
                         <div class="committee" value="'.getName($conn,$cid).'">
-                            <span class="committee-side"></span>
+                            <div class="committee-side"></div>
                             <div class="committee-content">
                                 <div class="committee-img"><img src='.getImage($conn,$cid).' alt="committee image"></div>
                                 <div class="committee-name-desc">
