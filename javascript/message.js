@@ -72,7 +72,7 @@ Chatsubmit.onclick = () =>
         console.log(data);
         if(data=="success")
         {          
-          alert('posted');              
+          Chat.querySelector('input[name="chat-text"]').value='';
         }
         else
         {
@@ -85,3 +85,25 @@ Chatsubmit.onclick = () =>
   let ChatformData = new FormData(Chat);
   xhr.send(ChatformData);
 }
+
+//get messages
+setInterval(
+  function()
+  {
+    let xhr = new XMLHttpRequest();
+    xhr.open("POST", "../message/getmessages.php?username="+msgUser, true);
+    xhr.onload = ()=>
+    {
+      if(xhr.readyState === XMLHttpRequest.DONE)
+      {
+        if(xhr.status === 200)
+        {
+          let data = xhr.response;
+          data=data.trim();
+          document.querySelector(".messages").innerHTML=data;
+        }
+      }
+    }
+    xhr.send();
+  },
+  500)

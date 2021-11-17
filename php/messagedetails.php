@@ -14,15 +14,18 @@
         $to_uid=getUid($conn,$username);
         
         $text=$_POST['chat-text'];
-        
-        if(postMessage($conn,$_SESSION['uid'],$to_uid,$text))
+        $textTrim=trim($text);
+        if(!empty($textTrim))
         {
-            echo "success";
-        }
-        else
-        {
-            echo "error";
-        }
+            if(postMessage($conn,$_SESSION['uid'],$to_uid,$textTrim))
+            {
+                echo "success";
+            }
+            else
+            {   
+                echo "error";
+            }   
+        }      
     }
     else
     {

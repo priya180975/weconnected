@@ -22,37 +22,32 @@
                 <input type="text" placeholder="enter username to search" name="search-bar">
                 <div id="search-result"></div>
             </div>
-            <div id="chat-window">
-                <div id="chat-display">
-                    <div class="messages" >
-                        <?php
-                            $Allmessage=getAllmessage($conn,$_SESSION['uid'],$_REQUEST['username']);
-                            if($Allmessage=='')
-                            {
-                                echo "no message";
-                            }
-                            else
-                            {
-                                foreach($Allmessage as $key => $mid)
-                                {
-                                    if(fromUid($conn,$mid)==$_SESSION['uid'])
-                                    {
-                                        echo '<div class="message-content send"><span>'.midMessage($conn,$mid).'</span></div>';
-                                    }
-                                    else
-                                    {
-                                        echo '<div class="message-content receive"><span>'.midMessage($conn,$mid).'</span></div>';
-                                    }
-                                }
-                            }
-                        ?>
-                    </div>
-                </div>
-                <form action="#" method="post" enctype="multipart/form-data" autocomplete="off" id="chat-content" name="chat-content">
-                    <input type="text" placeholder="....." name="chat-text" id="chat-text">
-                    <button type="submit" id="posted-content-btn" name="submit" class="btn"><i class="far fa-paper-plane"></i></button>
-                </form> 
-            </div>
+            
+                
+                    <?php 
+                        if(!isset($_REQUEST['username']))
+                        {
+                           echo "search a user to message"; 
+                        }
+
+                        else
+                        {
+                            echo '
+                            <div id="chat-window">
+                                <div id="chat-display">
+                                    <div class="messages" >';
+                                    
+                                    
+                                    echo 
+                                    '</div>
+                                </div>
+                                <form action="#" method="post" enctype="multipart/form-data" autocomplete="off" id="chat-content" name="chat-content">
+                                    <input type="text" placeholder="....." name="chat-text" id="chat-text">
+                                    <button type="submit" id="posted-content-btn" name="submit" class="btn"><i class="far fa-paper-plane"></i></button>
+                                </form> 
+                            </div>';
+                        }
+                    ?>
         </main>
     </div>
 
