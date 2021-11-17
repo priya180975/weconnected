@@ -9,6 +9,7 @@
     <link rel="icon" type="image/svg" href="../images/logo-dots.svg">
     <link rel="stylesheet" type="text/css" href="../stylesheet/main.css">
     <link rel="stylesheet" type="text/css" href="../stylesheet/community.css">
+    <link rel="stylesheet" type="text/css" href="../stylesheet/comments.css">
     <title>WeConnected | Saved Page</title>
 </head>
 <body>
@@ -46,6 +47,7 @@
     <!--Post template-->
     <?php include_once '../main/posttemplate.php' ?>
 
+    <script src="../javascript/displaycomment.js"></script>
     <script src="../javascript/main.js"></script>
     <script src="../javascript/saved.js"></script>
 
