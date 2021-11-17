@@ -193,6 +193,12 @@ main #profile-info-display .centered .profile-info .course-student {
   margin-top: 0.5rem;
 }
 
+main #profile-info-display .centered .profile-info .course-student .proDesc {
+  padding: 1rem 1rem 0rem;
+  word-break: break-word;
+  text-align: center;
+}
+
 main #profile-info-display .centered #post-btn-div {
   margin-top: 0.5rem;
 }

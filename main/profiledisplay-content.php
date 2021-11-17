@@ -11,7 +11,7 @@ echo '
     <div class="course-student">
         <!--usertype description-->                         
         <div style="text-align:center">'.getUserType($conn,$_SESSION['uid']).'</div>
-        <div style="padding:0 1rem;white-space: pre-wrap; word-break: break-all;">'.getUserDescription($conn,$_SESSION['uid']).'</div>
+        <div class="proDesc">'.getUserDescription($conn,$_SESSION['uid']).'</div>
     </div>
 </div>';
 ?>

@@ -11,7 +11,7 @@
 
     if(updateProfile($conn,$name,$course,$year,$description,$_SESSION['uid']))
     {
-        echo '';
+        echo "success";
     }
     else
     {

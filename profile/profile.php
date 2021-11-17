@@ -35,7 +35,7 @@
                 <img src="<?php echo getImage($conn,$_SESSION['uid'])?>" id="profile-img" alt="profile-image">
                     
                     <div class="form__input img_change">
-                        <input type="button" name="default" value="default-image" id="default" class="btn img_btn" onclick=<?php setDefaultProfile($conn,$_SESSION['uid']); ?>>    
+                        <!-- <input type="button" name="default" value="default-image" id="default" class="btn img_btn" onclick=<?php //setDefaultProfile($conn,$_SESSION['uid']); ?>>     -->
                         <input type="file" name="image" id="image" accept="image/x-png,image/gif,image/jpeg,image/jpg"  class="btn img_btn">
                     </div>
                 
@@ -76,7 +76,7 @@
                     </div>
                     <div class="form__input none desc_div">
                         <label for="desc">Description</label>
-                        <input type="text" name="desc" value="">
+                        <input type="text" name="desc" maxlength="50" value="<?php echo getUserDescription($conn,$_SESSION['uid']);?>">
                     </div>
 
                     <div class="form__input btn_div">

@@ -43,33 +43,7 @@
         }
     }
 
-    function setDefaultProfile($conn,$uid)
-    {
-        $type= getUserType($conn,$uid);
-
-        if($type=="Teacher")
-        {
-            $profile_img="teacher-default.jpg";
-        }
-        else if($type=="Committee")
-        {
-            $profile_img="community-default.jpg";
-        }
-        else
-        {
-            $profile_img="user-default.jpg";
-        }
     
-        $sql=mysqli_query($conn,"UPDATE profile SET profile_img='{$profile_img}' WHERE uid='{$uid}'");
-        if($sql)
-        {
-            return true;
-        }
-        else
-        {
-            return false;
-        }
-    }
 
     function updateImage($conn,$files,$uid)
     {
