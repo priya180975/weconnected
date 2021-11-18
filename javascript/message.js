@@ -73,6 +73,12 @@ Chatsubmit.onclick = () =>
         if(data=="success")
         {          
           Chat.querySelector('input[name="chat-text"]').value='';
+          $.ajax({
+            url:getAllMessages(),
+            success:function(){
+              document.querySelector("#chat-display").scrollTop=document.querySelector("#chat-display").scrollHeight;
+            }
+         })
         }
         else
         {
@@ -87,23 +93,24 @@ Chatsubmit.onclick = () =>
 }
 
 //get messages
-setInterval(
-  function()
+setInterval(getAllMessages,200)
+
+function getAllMessages()
+{
+  let xhr = new XMLHttpRequest();
+  xhr.open("POST", "../message/getmessages.php?username="+msgUser, true);
+  xhr.onload = ()=>
   {
-    let xhr = new XMLHttpRequest();
-    xhr.open("POST", "../message/getmessages.php?username="+msgUser, true);
-    xhr.onload = ()=>
+    if(xhr.readyState === XMLHttpRequest.DONE)
     {
-      if(xhr.readyState === XMLHttpRequest.DONE)
+      if(xhr.status === 200)
       {
-        if(xhr.status === 200)
-        {
-          let data = xhr.response;
-          data=data.trim();
-          document.querySelector(".messages").innerHTML=data;
-        }
+        let data = xhr.response;
+        data=data.trim();
+        document.querySelector(".messages").innerHTML=data;
       }
     }
-    xhr.send();
-  },
-  500)
+  }
+  xhr.send();
+  document.querySelector("#chat-display").scrollTop=document.querySelector("#chat-display").scrollHeight
+} 

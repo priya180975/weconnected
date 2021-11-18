@@ -82,34 +82,78 @@ main{
         // grid-template-columns: 1fr 1fr ;
         // margin-bottom: 1rem;
         
+        .userheading{
+            padding: 0.5rem;
+            font-size: 0.8rem;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            background: #edf1ff;
+            
+            img{
+                width: 30px;
+                height: 30px;   
+                border-radius: 50%;
+                margin-right: 1rem;
+            }
+        }
+
         .messages{
             //border:1px solid red;
+            .me{
+                background-color: red;
+                padding: 1rem;
+            }
 
             .message-content{
                 // border:1px solid teal;
                 //width: max-content;
-                // background: #EDF1FF;
                 font-size: 0.8rem;
-                margin: 1rem;
+                //margin: 0.7rem 0rem;
                 padding: 0.5rem 0rem;
-        
-                span{
+                //display: flex;
+
+                //delete below
+                // background: red;
+                //border: 1px solid red;
+                //margin-bottom: 1rem;
+                width: 100%;
+                display: flex;
+
+                div{
                     //background: red;
                     padding: 0.5rem 1rem;
-                    border:1px solid #212121;
-                    background: #EDF1FF;
+                    //border:1px solid #212121;
+                    background: #c4cef3;
+                    border-radius: 1rem;
+                    //margin-right: 1rem;
+
+                    //delete
+                    //min-width: max-content;
+                    max-width: 60%;
+                    word-break: break-word;                               
+                }
+
+                img{
+                    width: 30px;
+                    height: 30px;   
+                    border-radius: 50%;
+                    // margin-right: 1rem;
                 }
                 
-                // span::after{
-                //     content:"";
-                //     background: pink;
-                //     border:1px solid black;
-                //     padding: 1rem;
-                // }
             }
             .send{
                 background: none;
-                text-align: right;
+                //text-align: right;
+                justify-content: flex-end;
+                div{
+                    border-bottom-right-radius: 0 ;
+                }
+            }
+            .receive{
+                div{
+                    border-bottom-left-radius: 0 ;
+                }
             }
         }
 

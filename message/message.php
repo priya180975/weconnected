@@ -35,9 +35,14 @@
                             echo '
                             <div id="chat-window">
                                 <div id="chat-display">
-                                    <div class="messages" >';
+                                    <div class="userheading">
+                                        <img src="'.getImage($conn,getUid($conn,$_REQUEST['username'])).'">
+                                        <span>'.$_REQUEST['username'].'</span>
+                                    </div>
+                                    <div class="messages">
+                                    ';
                                     
-                                    
+
                                     echo 
                                     '</div>
                                 </div>

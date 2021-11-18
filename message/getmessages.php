@@ -2,6 +2,7 @@
 
 include_once "../php/config.php";
 include_once "../php/messagefunctions.php";
+include_once "../php/mainfunctions.php";
 
 
 if(!isset($_SESSION)) 
@@ -21,11 +22,15 @@ else
     {
         if(fromUid($conn,$mid)==$_SESSION['uid'])
         {
-            echo '<div class="message-content send"><span>'.midMessage($conn,$mid).'</span></div>';
+            echo '
+            <div class="message-content send">
+            <div>'.midMessage($conn,$mid).'</div>
+            <!--<img src="'.getImage($conn,$_SESSION['uid']).'"></img>-->
+            </div>';
         }
         else
         {
-            echo '<div class="message-content receive"><span>'.midMessage($conn,$mid).'</span></div>';
+           echo '<div class="message-content receive"><div>'.midMessage($conn,$mid).'</div></div>';
         }
     }
 }
