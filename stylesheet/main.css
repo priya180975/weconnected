@@ -528,10 +528,17 @@ main #committee {
         -ms-flex-align: center;
             align-items: center;
     border-left: 1px solid black;
-    padding-left: 1rem;
+    padding: 0.3rem 1rem;
   }
   nav #nav-icons #profile-pic-nav-div img {
     margin-bottom: 4px;
+  }
+  nav #nav-icons #profile-pic-nav-div a {
+    font-size: 0.6rem;
+    font-family: inherit;
+    font-weight: bolder;
+    cursor: pointer;
+    margin: 0 auto;
   }
   nav #nav-icons #profile-pic-nav-div #profile-pic-nav {
     width: 30px;

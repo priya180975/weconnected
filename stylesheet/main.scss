@@ -506,10 +506,21 @@ main{
                 flex-direction: column;
                 align-items: center;
                 border-left: 1px solid black;
-                padding-left: 1rem;
+                //padding-left: 1rem;
+                padding: 0.3rem 1rem;
+                //border:1px solid green;
 
                 img{
                     margin-bottom: 4px;
+                }
+
+                a{
+                    font-size: 0.6rem;
+                    font-family: inherit;
+                    font-weight: bolder;
+                    cursor: pointer;
+                    // background: red;
+                    margin: 0 auto;
                 }
 
                 #profile-pic-nav{

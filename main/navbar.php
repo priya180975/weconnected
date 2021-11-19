@@ -75,7 +75,7 @@
         </div>
         <div id="profile-pic-nav-div">
             <img src="'.getImage($conn,$_SESSION['uid']).'" alt="profile pic" id="profile-pic-nav">
-            <span>Me</span>
+            <a href="../php/logout.php">Logout</a>
         </div>
     </div>
     </nav>
