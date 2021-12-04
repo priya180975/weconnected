@@ -10,7 +10,7 @@ function savepost(e)
         let postDiv=e.target.parentElement.parentElement.parentElement.parentElement;
         let contentDiv=postDiv.querySelector('.content-profile-name');
         let Span=contentDiv.querySelectorAll('span');
-        let username=Span[1].innerHTML;
+        let username=Span[0].innerHTML;
         let datetime=Span[2].innerHTML;
         
         var timestamp = new Date(datetime);
@@ -44,7 +44,7 @@ function savepost(e)
         let postDiv=e.target.parentElement.parentElement.parentElement.parentElement;
         let contentDiv=postDiv.querySelector('.content-profile-name');
         let Span=contentDiv.querySelectorAll('span');
-        let username=Span[1].innerHTML;
+        let username=Span[0].innerHTML;
         let datetime=Span[2].innerHTML;
         
         var timestamp = new Date(datetime);
