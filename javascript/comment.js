@@ -34,7 +34,7 @@ function addComment(e)
     let postedDiv=e.target.parentElement.parentElement.parentElement.parentElement.parentElement;
     let contentDiv=postedDiv.querySelector('.content-profile-name');
     let Spans=contentDiv.querySelectorAll('span');
-    let username1=Spans[1].innerHTML;
+    let username1=Spans[0].innerHTML;
     let datetime1=Spans[2].innerHTML;
     
     var timestamp1 = new Date(datetime1);

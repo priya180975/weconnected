@@ -191,4 +191,9 @@
             return "invalid";
         }
     }
+
+    function getPostUserType($conn,$pid)
+    {
+        return getUserType($conn,getPostUid($conn,$pid));
+    }
 ?>

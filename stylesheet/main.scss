@@ -294,7 +294,11 @@ main{
         i{
             color: white;
         }
-        
+
+        .alterN{
+            pointer-events: none;
+        }   
+
         #post-show-btn{
             cursor: pointer;
             display: block;

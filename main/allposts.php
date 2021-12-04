@@ -25,8 +25,8 @@ include_once "../php/commentfunctions.php";
             <div class="content-profile-pic-name">
                 <div class="content-profile-pic"><img src="'.getPostImage($conn,$pid).'" alt="profile-pic"></div>
                 <div class="content-profile-name">
-                    <span>'.getPostName($conn,$pid).'</span>
                     <span style="font-weight:bold">'.getPostUsername($conn,$pid).'</span>
+                    <span>'.getPostUserType($conn,$pid).'</span>
                     <span>'.getTimeStamp($conn,$pid).'</span>
                 </div>                        
             </div>

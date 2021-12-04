@@ -324,6 +324,10 @@ main #committee {
   color: white;
 }
 
+.temp .content-interact .alterN {
+  pointer-events: none;
+}
+
 .temp .content-interact #post-show-btn {
   cursor: pointer;
   display: block;

@@ -47,11 +47,13 @@ echo'
 <div class="content-interact">
     <button class="btn" id="cancel">cancel</button>
     <div class="send post">
-    <!-- <input type="checkbox" class="btn show" id="post-show-btn" name="show">
-    <input type="checkbox" name="chk1">   -->
-        <button type="submit" id="posted-content" name="submit" class="btn"><i class="far fa-paper-plane"></i></button>
-        <input class="btn show"  id="post-show-btn" name="show-hide" value="show">
-        <!-- <input class="btn ques" name="ques" value="0"> -->
+        <button type="submit" id="posted-content" name="submit" class="btn"><i class="far fa-paper-plane" title="send"></i></button>
+        <input class="btn show ';
+        if(getUserType($conn,$_SESSION['uid'])=="Teacher")
+        {
+            echo 'alterN';
+        }
+        echo '"  id="post-show-btn" name="show-hide" value="show" title="show-hide">
     </div>
 </div>
 </form>
