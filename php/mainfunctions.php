@@ -84,6 +84,22 @@
         }
     }
 
+    //username from email
+    function getUsernameEmail($conn,$email)
+    {
+        $sql=mysqli_query($conn,"SELECT username FROM users WHERE email='{$email}'");
+        if(mysqli_num_rows($sql)>0)
+        {
+            $result = mysqli_fetch_assoc($sql);
+            return $result['username'];
+        }
+        else
+        {
+            return "invalid";
+        }
+    }
+
+
     //filter topic tags
     function getTopicTags($conn)
     {

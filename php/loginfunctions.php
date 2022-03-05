@@ -140,7 +140,9 @@
             //profile image 
             //$profile_img="user-default.jpg";
         }
+
         $profile_img="default-profileAll.jpg";
+        
         //create user query
         $sql=mysqli_query($conn,"INSERT INTO users (uid,name,username,email,password) values ('{$uid}','{$name}','{$username}','{$email}','{$passwordHashed}')");
         

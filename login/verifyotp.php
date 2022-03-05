@@ -1,3 +1,14 @@
+<?php
+
+session_start();
+if(!isset($_SESSION['otpEmail']))
+{
+    header('location:../login/forget.html');
+    exit();
+}
+else
+{
+    echo'
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -35,3 +46,7 @@
     
 </body>
 </html>
+';
+}
+
+?>

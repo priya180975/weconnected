@@ -2,6 +2,7 @@
 
 include_once "config.php";
 include_once "loginfunctions.php";
+
 session_start();
 
 if(isset($_POST['email']))
@@ -18,6 +19,7 @@ if(isset($_POST['email']))
         {
             $rand= rand(100000,999999);
             $_SESSION['otp']=$rand;
+            $_SESSION['otpEmail']=$email;
             $text='Request for change of Password OTP : '. $rand;
             
 
@@ -35,14 +37,21 @@ if(isset($_POST['email']))
 if(isset($_POST['otpvalue']))
 {
     $otp=$_POST['otpvalue'];
+
     if($otp==$_SESSION['otp'])
     {
         echo "done";
+        unset($_SESSION['otp']);
+        $_SESSION['otpverfied']=true;
     }
     else
     {
         echo "invalid";
     }
 }
+
+
+
+
 
 ?>

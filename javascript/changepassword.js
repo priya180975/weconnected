@@ -1,5 +1,5 @@
-const form=document.querySelector("#reset-form"),
-submit=document.querySelector("#send"),
+const form=document.querySelector("#changepwd-form"),
+submit=document.querySelector("#reset"),
 error=document.querySelector("#error");
 
 
@@ -10,15 +10,15 @@ form.onsubmit = (e)=>{
 // submit form
 submit.onclick = ()=>{
   let xhr = new XMLHttpRequest();
-  xhr.open("POST", "../php/forget.php", true);
+  xhr.open("POST", "../php/resetpassword.php", true);
   xhr.onload = ()=>{
     if(xhr.readyState === XMLHttpRequest.DONE){
       if(xhr.status === 200){
         let data = xhr.response;
         data=data.trim();
-        if(data === "otp sent")
+        if(data=='password updated')
         {
-          window.location="../login/verifyotp.php";
+          window.location="../main/main.php";
         }
         else
         {

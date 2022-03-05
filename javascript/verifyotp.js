@@ -17,9 +17,10 @@ verifyotp.onclick = ()=>{
         if(xhr.status === 200){
             let data = xhr.response;
             data=data.trim();
-            if(data === "otp sent")
+            if(data === "done")
             {
                 error.textContent = data;
+                window.location="../login/changepassword.php";
             }
             else
             {
