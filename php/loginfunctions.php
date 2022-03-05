@@ -196,7 +196,7 @@
 
             if($checkpassword==false)
             {
-                echo "Incorrect login details";
+                echo "Incorrect password";
             }
             else
             {

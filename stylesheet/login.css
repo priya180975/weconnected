@@ -87,7 +87,7 @@ body {
   margin-bottom: 0.5rem;
 }
 
-.container #form #btn button {
+.container #form button {
   position: relative;
   left: 77%;
   background: #01403A;
