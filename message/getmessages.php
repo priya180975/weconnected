@@ -22,15 +22,25 @@ else
     {
         if(fromUid($conn,$mid)==$_SESSION['uid'])
         {
+            $date=midTimestamp($conn,$mid);
+
             echo '
             <div class="message-content send">
+            <span class="span" style="font-size:0.5rem">'.date('h:i a',strtotime($date)).'</span>
             <div>'.midMessage($conn,$mid).'</div>
-            <!--<img src="'.getImage($conn,$_SESSION['uid']).'"></img>-->
+            <img src="'.getImage($conn,$_SESSION['uid']).'"></img>
             </div>';
         }
         else
         {
-           echo '<div class="message-content receive"><div>'.midMessage($conn,$mid).'</div></div>';
+           $date=midTimestamp($conn,$mid);
+
+           echo '
+           <div class="message-content receive">
+           <img src="'.getImage($conn,getUid($conn,$_REQUEST['username'])).'">
+           <div>'.midMessage($conn,$mid).'</div>
+           <span class="span" style="font-size:0.5rem">'.date('h:i a',strtotime($date)).'</span>
+           </div>';
         }
     }
 }

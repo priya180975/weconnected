@@ -19,8 +19,38 @@
             
         <main>
             <div id="search-users">
-                <input type="text" placeholder="enter username to search" name="search-bar">
-                <div id="search-result"></div>
+                <input type="text" placeholder="search" name="search-bar">
+                <div id="search-result">
+                    <?php 
+                        function chattUsers($conn,$uid)
+                        {
+                            $sqlMess=mysqli_query($conn,"SELECT DISTINCT to_uid from message WHERE from_uid='{$uid}';");
+                            if(mysqli_num_rows($sqlMess)>0)
+                            {
+                                $resultMess = mysqli_fetch_assoc($sqlMess);
+                                return $resultMess;
+                            }
+                            else
+                            {
+                                return '';
+                            }
+                        }
+
+                        $AllCUsers=chattUsers($conn,$_SESSION['uid']);
+                        if($AllCUsers=='')
+                        {
+                            echo "no user selected";
+                        }
+                        else
+                        {
+                            foreach($AllCUsers as $key => $uid)
+                            {
+                                echo getUsername($conn,$AllCUsers);
+                            }
+                        }
+                    ?>
+                </div>
+
             </div>
             
                 
@@ -34,11 +64,33 @@
                         {
                             echo '
                             <div id="chat-window">
-                                <div id="chat-display">
-                                    <div class="userheading">
+                            <div class="userheading">
+                                <div class="flex-userheading">
+                                    <div class="userheading-div1">
                                         <img src="'.getImage($conn,getUid($conn,$_REQUEST['username'])).'">
-                                        <span>'.$_REQUEST['username'].'</span>
+                                        <span>'.$_REQUEST['username'].'</span> 
                                     </div>
+                                <div>
+                                ';
+                                if(getUserType($conn,getUid($conn,$_REQUEST['username']))=="Committee")
+                                {
+                                    echo '<span class="icon-userhead" title="committee" >C</span>';
+                                }
+                                elseif (getUserType($conn,getUid($conn,$_REQUEST['username']))=="Teacher") {
+                                    echo '<span class="icon-userhead" title="teacher">T</span>';
+                                }
+                                else
+                                {
+                                    echo '<span class="icon-userhead" title="user">U</span>';
+                                };
+                                
+                                echo'
+                                    <span style="color:grey;font-size:0.5rem;">&nbsp;&nbsp;'.getName($conn,getUid($conn,$_REQUEST['username'])).'</span>
+                            </div>
+                            </div>
+                            </div>
+                                <div id="chat-display">
+                                    
                                     <div class="messages">
                                     ';
                                     

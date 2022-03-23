@@ -11,8 +11,8 @@
 }
 
 body {
-  font-family: 'Spartan', sans-serif;
-  background: #F8F8FB;
+  font-family: "Spartan", sans-serif;
+  background: #f8f8fb;
 }
 
 body .btn {
@@ -46,6 +46,7 @@ nav {
   position: fixed;
   width: 100%;
   z-index: 1;
+  top: 0;
   height: 10vh;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -56,7 +57,7 @@ nav {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background: #FCFCFC;
+  background: #fcfcfc;
   -webkit-box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
           box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
 }
@@ -110,7 +111,7 @@ nav #nav-icons button {
 nav .drop-down-menu-items {
   overflow: scroll;
   position: absolute;
-  background: #FCFCFC;
+  background: #fcfcfc;
   padding: 1rem 0;
   right: 0;
   width: 70%;
@@ -125,7 +126,7 @@ nav .drop-down-menu-items .drop-down-menu-item {
 nav .drop-down-menu-items .drop-down-menu-item #filter {
   width: 100%;
   text-align: left;
-  font-family: 'Spartan', sans-serif;
+  font-family: "Spartan", sans-serif;
   font-weight: bold;
   font-size: 0.8rem;
 }
@@ -164,12 +165,12 @@ main #right-desk .filter-options {
 
 main #profile-info-display {
   position: relative;
-  background: #EDF1FF;
+  background: #edf1ff;
   border-radius: 1rem;
 }
 
 main #profile-info-display .centered img {
-  border: 2px solid #EDF1FF;
+  border: 2px solid #edf1ff;
   width: 60px;
   height: 60px;
   border-radius: 50%;
@@ -207,7 +208,7 @@ main #profile-info-display .centered #post-btn-div #post-btn {
   background: #000;
   padding: 0.6rem 1.1rem;
   color: white;
-  font-family: 'Spartan', sans-serif;
+  font-family: "Spartan", sans-serif;
   border-radius: 2rem;
   font-weight: bold;
   cursor: pointer;
@@ -291,7 +292,7 @@ main #committee {
 }
 
 .temp .content-profile-info .content-tag {
-  background: #EDF1FF;
+  background: #edf1ff;
   padding: 0.5rem 1rem;
 }
 
@@ -302,7 +303,8 @@ main #committee {
   word-break: break-word;
 }
 
-.temp button, .temp select {
+.temp button,
+.temp select {
   cursor: pointer;
 }
 
@@ -353,24 +355,28 @@ main #committee {
   background: #8be6fd;
 }
 
-.temp .content-interact .content-interact-comment, .temp .content-interact .send {
+.temp .content-interact .content-interact-comment,
+.temp .content-interact .send {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-.temp .content-interact .content-interact-comment .comment, .temp .content-interact .send .comment {
+.temp .content-interact .content-interact-comment .comment,
+.temp .content-interact .send .comment {
   margin-right: 0.5rem;
 }
 
-.temp .content-interact .content-interact-comment .show, .temp .content-interact .send .show {
+.temp .content-interact .content-interact-comment .show,
+.temp .content-interact .send .show {
   padding: 0.5rem;
-  background: #7CF9687D;
+  background: #7cf9687d;
   border-radius: 50%;
 }
 
-.temp .content-interact .content-interact-comment .show-no, .temp .content-interact .send .show-no {
-  background: #F968687D;
+.temp .content-interact .content-interact-comment .show-no,
+.temp .content-interact .send .show-no {
+  background: #f968687d;
 }
 
 #back-to-top-div {
@@ -388,75 +394,90 @@ main #committee {
   padding: 0.8rem;
   border-radius: 15px;
   background: #1e5f1e;
-  font-family: 'Spartan', sans-serif;
+  font-family: "Spartan", sans-serif;
   color: white;
   cursor: pointer;
 }
 
-.post-content, .comment-content {
+.post-content,
+.comment-content {
   position: absolute;
   width: 100%;
   top: 8rem;
 }
 
-.post-content .after-post, .comment-content .after-post {
+.post-content .after-post,
+.comment-content .after-post {
   text-align: center;
   font-size: 1.2rem;
   font-weight: bold;
   color: green;
 }
 
-.post-content .after-post button, .comment-content .after-post button {
+.post-content .after-post button,
+.comment-content .after-post button {
   background: black;
   color: #fff;
   padding: 1rem;
 }
 
-.post-content #error, .post-content #comment-error, .comment-content #error, .comment-content #comment-error {
+.post-content #error,
+.post-content #comment-error,
+.comment-content #error,
+.comment-content #comment-error {
   font-size: 0.8rem;
   font-weight: bold;
 }
 
-.post-content .content-heading, .comment-content .content-heading {
+.post-content .content-heading,
+.comment-content .content-heading {
   position: relative;
 }
 
-.post-content .content-heading #heading, .comment-content .content-heading #heading {
+.post-content .content-heading #heading,
+.comment-content .content-heading #heading {
   width: 100%;
   padding: 0.5rem;
-  font-family: 'Spartan', sans-serif;
+  font-family: "Spartan", sans-serif;
   font-weight: bold;
   border: none;
   outline: none;
   font-size: 1rem;
 }
 
-.post-content .content-tag, .comment-content .content-tag {
+.post-content .content-tag,
+.comment-content .content-tag {
   padding: 0.2rem !important;
 }
 
-.post-content .content-tag select, .comment-content .content-tag select {
+.post-content .content-tag select,
+.comment-content .content-tag select {
   padding: 0.2rem 1rem;
   border: none;
   background-color: rgba(255, 143, 0, 0.2);
   outline: none;
 }
 
-.post-content .content-text #content, .comment-content .content-text #content {
+.post-content .content-text #content,
+.comment-content .content-text #content {
   width: 100%;
   border: none;
   outline: none;
-  font-family: 'Spartan', sans-serif;
+  font-family: "Spartan", sans-serif;
   font-weight: bold;
   height: 6rem;
 }
 
-.post-content .content-interact #cancel, .post-content .content-interact #cancel-comment, .comment-content .content-interact #cancel, .comment-content .content-interact #cancel-comment {
+.post-content .content-interact #cancel,
+.post-content .content-interact #cancel-comment,
+.comment-content .content-interact #cancel,
+.comment-content .content-interact #cancel-comment {
   color: #fff;
-  font-family: 'Spartan', sans-serif;
+  font-family: "Spartan", sans-serif;
 }
 
-.post-content .content-interact #posted-content, .comment-content .content-interact #posted-content {
+.post-content .content-interact #posted-content,
+.comment-content .content-interact #posted-content {
   margin-right: 1rem;
 }
 
@@ -555,7 +576,8 @@ main #committee {
   #back-to-top-div {
     margin: 0 30%;
   }
-  .post-content, .comment-content {
+  .post-content,
+  .comment-content {
     width: 50%;
     margin: 0 25%;
   }
@@ -582,7 +604,7 @@ main #committee {
     height: -moz-max-content;
     height: max-content;
     top: 5rem;
-    background: #F9FAFE;
+    background: #f9fafe;
     margin-top: 2rem;
     border-radius: 15px;
   }
@@ -593,7 +615,7 @@ main #committee {
     background: rgba(187, 215, 178, 0.9);
     padding: 1rem;
     border-radius: 50%;
-    border: 2px solid #F9FAFE;
+    border: 2px solid #f9fafe;
   }
   main #right-desk .filter-options .filter-desk-data {
     padding-bottom: 2rem;
@@ -630,7 +652,7 @@ main #committee {
     grid-row: 1;
     display: block;
     border-radius: 15px;
-    background: #F9FAFE;
+    background: #f9fafe;
   }
   main #committee .black {
     background: rgba(187, 215, 178, 0.5);
@@ -639,7 +661,7 @@ main #committee {
     background: rgba(187, 215, 178, 0.9);
     padding: 1rem;
     border-radius: 50%;
-    border: 2px solid #F9FAFE;
+    border: 2px solid #f9fafe;
   }
   main #committee .all-committee::-webkit-scrollbar {
     width: 0.2rem;
@@ -654,7 +676,7 @@ main #committee {
     padding-bottom: 3rem;
   }
   main #committee .all-committee .committee {
-    background: #EDF1FF;
+    background: #edf1ff;
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: 0.1fr 2fr 0.4fr;

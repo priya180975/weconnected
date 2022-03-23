@@ -5,11 +5,19 @@ main {
       -ms-flex-pack: justify;
           justify-content: space-between;
   height: 85vh;
+  margin: 0 1rem;
+  padding: 0rem  !important;
 }
 
 main a {
   text-decoration: none;
   color: black;
+}
+
+@media (min-width: 800px) {
+  .main {
+    padding: 0rem  !important;
+  }
 }
 
 #container input {
@@ -19,30 +27,68 @@ main a {
   background: none;
 }
 
-#search-users {
-  padding: 1rem;
-  background: #F9FAFE;
-}
-
 #search-users input {
   padding: 0.6rem;
-  border: 0.1rem solid #212121;
-}
-
-#search-users #search-result .search-data {
-  border-radius: 0.5rem;
-  width: 100%;
-  background: #EDF1FF;
+  width: 80px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  font-size: 0.7rem;
+  border: none;
+  border-radius: 1rem;
+  -webkit-box-shadow: 0px 0px 2px 1px #c3d5f3;
+          box-shadow: 0px 0px 2px 1px #c3d5f3;
+  -webkit-transition: width 0.4s ease-in-out;
+  transition: width 0.4s ease-in-out;
+  background: #f2f7ff;
+}
+
+#search-users input:focus {
+  width: 100%;
+}
+
+#search-users #search-result::-webkit-scrollbar {
+  width: 0.3rem;
+}
+
+#search-users #search-result::-webkit-scrollbar-thumb {
+  background-color: #e7e7e7;
+}
+
+#search-users #search-result {
+  margin-top: 1rem;
+  height: 75vh;
+  overflow: auto;
+  overflow-x: hidden;
+  padding: 0.5rem 0.5rem;
+}
+
+#search-users #search-result .search-data:nth-child(1) {
+  border-radius: 1rem 1rem 0rem 0rem;
+  -webkit-box-shadow: 0px 0px 6px 1px #c3d5f3;
+          box-shadow: 0px 0px 6px 1px #c3d5f3;
+}
+
+#search-users #search-result .search-data:last-child {
+  border-radius: 0rem 0rem 1rem 1rem;
+  -webkit-box-shadow: 1px 4px 6px 1px  #c3d5f3;
+          box-shadow: 1px 4px 6px 1px  #c3d5f3;
+}
+
+#search-users #search-result .search-data {
+  width: 100%;
+  -webkit-box-shadow: 0px 5px 6px 1px #c3d5f3;
+          box-shadow: 0px 5px 6px 1px #c3d5f3;
+  background: #f2f7ff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 0.8rem;
   font-weight: bold;
-  padding: 0.5rem 1rem;
-  margin: 0.5rem 0;
+  padding: 0.6rem 1rem;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  cursor: pointer;
 }
 
 #search-users #search-result .search-data img {
@@ -52,14 +98,21 @@ main a {
   margin-right: 0.5rem;
 }
 
+#search-users #search-result .search-data .font-small {
+  font-size: 0.6rem;
+  color: grey;
+}
+
 #chat-window {
+  border-radius: 1rem;
   max-height: 85vh;
+  background-color: #f2f7ff;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   display: -ms-grid;
   display: grid;
-  -ms-grid-rows: 92% 8%;
-      grid-template-rows: 92% 8%;
+  -ms-grid-rows: 9% 87% 2%;
+      grid-template-rows: 9% 87% 2%;
   border-bottom: 0;
 }
 
@@ -71,12 +124,18 @@ main a {
   background-color: #e7e7e7;
 }
 
-#chat-window #chat-display {
-  overflow: auto;
+#chat-window .userheading {
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
 }
 
-#chat-window #chat-display .userheading {
+#chat-window .userheading .flex-userheading {
+  border-radius: 1rem 1rem 0rem 0rem;
   padding: 0.5rem;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   font-size: 0.8rem;
   font-weight: bold;
   display: -webkit-box;
@@ -85,18 +144,43 @@ main a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background: #edf1ff;
+  background: #ddf5f8;
 }
 
-#chat-window #chat-display .userheading img {
-  width: 30px;
-  height: 30px;
+#chat-window .userheading .flex-userheading .userheading-div1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#chat-window .userheading .flex-userheading .icon-userhead {
+  background-color: #06123a;
+  color: white;
+  font-size: 0.5rem;
+  padding: 0.5rem;
+  border-radius: 50%;
+}
+
+#chat-window .userheading .flex-userheading img {
+  width: 35px;
+  margin-left: 0.5rem;
+  height: 35px;
   border-radius: 50%;
   margin-right: 1rem;
 }
 
+#chat-window #chat-display {
+  overflow: auto;
+}
+
+#chat-window #chat-display .messages {
+  padding: 1rem;
+}
+
 #chat-window #chat-display .messages .me {
-  background-color: red;
   padding: 1rem;
 }
 
@@ -107,20 +191,25 @@ main a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
 }
 
 #chat-window #chat-display .messages .message-content div {
   padding: 0.5rem 1rem;
   background: #c4cef3;
-  border-radius: 1rem;
+  border-radius: 0.7rem;
   max-width: 60%;
   word-break: break-word;
+  margin-top: 0.4rem;
 }
 
 #chat-window #chat-display .messages .message-content img {
   width: 30px;
   height: 30px;
   border-radius: 50%;
+  margin: 0 0.5rem;
 }
 
 #chat-window #chat-display .messages .send {
@@ -131,11 +220,12 @@ main a {
 }
 
 #chat-window #chat-display .messages .send div {
-  border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
+  background: rgba(42, 94, 45, 0.562);
 }
 
 #chat-window #chat-display .messages .receive div {
-  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
 }
 
 #chat-window #chat-display .message-receive {
@@ -146,17 +236,32 @@ main a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 #chat-window #chat-content input {
-  width: 95%;
+  width: 90%;
   padding: 0.6rem;
   border: 0.1rem solid #212121;
   font-weight: bold;
+  border: none;
+  border-radius: 1rem;
+  -webkit-box-shadow: 0px 0px 2px 1px #092d52;
+          box-shadow: 0px 0px 2px 1px #092d52;
+  background: #ffffff;
 }
 
 #chat-window #chat-content button {
   margin-left: 0.5rem;
   cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 50%;
+  background: #7bda97;
+  border: 1px solid #40aa3c;
 }
 /*# sourceMappingURL=message.css.map */

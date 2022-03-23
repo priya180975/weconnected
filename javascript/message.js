@@ -16,7 +16,6 @@ $(searchUser).on('keyup',function(){
           usersList.querySelectorAll('.search-data').forEach(e=> {
             e.onclick=()=>{
               let username=e.querySelector('.search-username').innerHTML;
-              console.log(username);
               
               let url="http://localhost:8080/weconnected/message/message.php";
               window.location=url+"?username="+username;

@@ -96,4 +96,11 @@
         $row = mysqli_fetch_assoc($sql);
         return $row['message'];
     }
+
+    function midTimestamp($conn,$mid)
+    {
+        $sql = mysqli_query($conn, "SELECT timestamp FROM message WHERE mid='{$mid}'");
+        $row = mysqli_fetch_assoc($sql);
+        return $row['timestamp'];
+    }
 ?>

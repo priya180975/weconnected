@@ -13,7 +13,7 @@
     {
         $name=getUsers($conn,$_SESSION['uid'],$searchTerm);
 
-        $url=$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
+        //$url=$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
         if($name)
         {
         foreach($name as $key => $uid)
@@ -22,7 +22,7 @@
                         <div class="search-img"><img src="'.getImage($conn,$uid).'" alt="'.getUsername($conn,$uid).'-profile-image"></div>
                         <div class="search-user-type">
                             <div class="search-username">'.getUsername($conn,$uid).'</div>
-                            <div class="search-user-type">'.getUserType($conn,$uid).'</div>
+                            <div class="search-user-type font-small">'.getUserType($conn,$uid).'</div>
                         </div>
                     </div>';
             }
