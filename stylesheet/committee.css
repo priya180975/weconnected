@@ -1,7 +1,7 @@
 #content-all {
   -ms-grid-column: 1 !important;
-  -ms-grid-column-span: 2 !important;
-  grid-column: 1/3 !important;
+  -ms-grid-column-span: 3 !important;
+  grid-column: 1/4 !important;
 }
 
 main #committee {
@@ -11,49 +11,62 @@ main #committee {
 main #committee .all-committee {
   padding: 0;
   height: auto;
+  margin-top: 2rem;
+  overflow: inherit;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (18%)[5];
+      grid-template-columns: repeat(5, 18%);
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
-.committee:first-child {
-  margin-top: 0 !important;
+.committee-info-display {
+  position: relative;
+  background: #edf1ff;
+  border-radius: 1rem;
+  margin-bottom: 1rem;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
 }
 
-.committee {
-  -ms-grid-columns: 0.1fr 4fr 0.4fr !important;
-      grid-template-columns: 0.1fr 4fr 0.4fr !important;
-  background: #edf1ff !important;
+.committee-info-display .black {
+  background-color: black !important;
 }
 
-.committee .committee-side {
-  background: #212121 !important;
-  padding: 1rem;
-  height: 100%;
-  border-radius: 10px 0 0 10px;
-}
-
-.committee .committee-content {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.committee .committee-content .committee-name-desc {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  padding: 1rem;
-}
-
-.committee .committee-content .committee-name-desc .committee-name {
-  margin-bottom: 0.5rem;
-}
-
-.committee .committee-img img {
-  width: 100px;
-  height: 100px;
+.committee-info-display .centered img {
+  border: 2px solid #edf1ff;
+  width: 60px;
+  height: 60px;
   border-radius: 50%;
+}
+
+.committee-info-display .centered .committee-info {
+  margin-top: 0.5rem;
+  font-size: 0.6rem !important;
+  font-weight: bold;
+  color: gray;
+}
+
+.committee-info-display .centered .committee-info .name {
+  font-size: 0.7rem !important;
+  font-weight: bold;
+  color: black;
+}
+
+.committee-info-display .centered .committee-info .dept {
+  padding: 1rem 1rem 0rem;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  word-break: break-word;
+  text-align: center;
+}
+
+.committee-info-display .committee-add-sub {
+  margin-bottom: 1rem;
+  cursor: pointer;
 }
 /*# sourceMappingURL=committee.css.map */

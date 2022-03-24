@@ -21,39 +21,28 @@
         ?>
 
         <main>
-            <div id="right-desk">
-                <!--profile-->
-                <div id="profile-info-display">
-                    <div class="black"></div>
-                    <div class="centered">
-                        <?php include_once '../main/profiledisplay-content.php'?>
-                    </div>
-                </div> 
-            </div>
-
             <div id="content-all">
                 <!--committee-->
                 <div id="committee">
-                    <!-- <div class="black"></div>
-                    <div class="centered committee-cont">
-                        <i class="fas fa-user-friends"></i>
-                    </div> -->
                     <div class="all-committee">
 
                     <?php foreach($committee as $key => $cid)
                     {
                         echo '
-                        <div class="committee" value="'.getName($conn,$cid).'">
-                            <div class="committee-side"></div>
-                            <div class="committee-content">
-                                <div class="committee-img"><img src='.getImage($conn,$cid).' alt="committee image"></div>
-                                <div class="committee-name-desc">
-                                    <div class="committee-name">'.getName($conn,$cid).'</div>
-                                    <div class="committee-dept">'.getUserDescription($conn,$cid).'</div>   
-                                </div> 
+                        <div class="committee-info-display centered" value="'.getName($conn,$cid).'">
+                            <div class="black"></div>
+                            <div class="centered">
+                                <img src="'.getImage($conn,$cid).'"alt="committee-image">
+                                <div class="committee-info">
+                                    <div class="name">'.getName($conn,$cid).'</div>
+                                    <div class="dept">'.getUserDescription($conn,$cid).'</div>
+                                </div>
                             </div>
-                            <button class="btn committee-add-sub"><i class="far fa-'.getUserCommittee($conn,$_SESSION['uid'],$cid).'-square"></i></button>
-                        </div>';
+                            <button class="btn committee-add-sub">
+                                <i class="far fa-'.getUserCommittee($conn,$_SESSION['uid'],$cid).'-square"></i>
+                            </button>
+                        </div>
+                        ';
                     }
                     ?>
                     </div>
