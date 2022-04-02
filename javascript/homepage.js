@@ -26,29 +26,6 @@ function addpost()
 //     }
 // }
 
-
-
-//back to top
-let backToUpbtn=document.querySelector("#back-to-top");
-
-setInterval(check,100);
-function check()
-{
-    if(window.scrollY>="300")
-    {
-        backToUpbtn.classList.remove("all");
-    }
-    else{backToUpbtn.classList.add("all");}
-}
-
-backToUpbtn.addEventListener("click",backToUp);
-
-function backToUp()
-{
-    window.scrollTo(0,0);
-}
-
-
 //filter
 const oriLoc="http://localhost:8080/weconnected/main/main.php";
 

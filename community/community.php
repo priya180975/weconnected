@@ -42,7 +42,7 @@
     </div>
 
     <!--back to top-->
-    <!-- <div id="back-to-top-div"><button id="back-to-top" class="btn">up</button></div> -->
+    <div id="back-to-top-div"><button id="back-to-top" class="btn">up</button></div>
 
     <!--Post template-->
     <?php //include_once '../main/posttemplate.php' ?>
@@ -50,6 +50,7 @@
 
     <script src="../javascript/displaycomment.js"></script>
     <script src="../javascript/main.js"></script>
+    <!-- <script src="../javascript/homepage.js"></script> -->
     <script src="../javascript/saved.js"></script>
     <script src="../javascript/comment.js"></script>
 
