@@ -33,6 +33,7 @@ include_once "../php/commentfunctions.php";
                 </div>
                 <div class="content-interact-comment">
                     <div class="comment" >
+                    <button class="btn"><i class="fas fa-plus-circle add-comment-btn"></i></button>
                     <button class="btn"><i class="far fa-comment-alt comment-btn"></i></button>
                     <span>'.countComments($conn,$pid).'</span>
                     </div>
