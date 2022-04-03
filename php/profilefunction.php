@@ -64,6 +64,20 @@
             {
                 $new_img_name = getUsername($conn,$_SESSION['uid']).'-profile.'.$img_ext;
 
+                foreach($extensions as $ext)
+                {
+                    $dir = "../images/profile";    
+                    $dirHandle = opendir($dir);
+                    $name=getUsername($conn,$_SESSION['uid']).'-profile.'.$ext;
+                    $data="{$name}";
+                    while ($file = readdir($dirHandle)) {    
+                        if($file==$data) {
+                            unlink($dir."/".$file);
+                        }
+                    }
+                    closedir($dirHandle);
+                }
+                
                 if(move_uploaded_file($tmp_name,"../images/profile/".$new_img_name))
                 {
                     $sql = mysqli_query($conn, "UPDATE profile SET profile_img='{$new_img_name}' WHERE uid='".$_SESSION['uid']."'");
@@ -76,7 +90,19 @@
                         return false;
                     }
                 }
+                else
+                {
+                    return false;
+                }
             }
+            else
+            {
+                return false;
+            }   
+        }
+        else
+        {
+            return false;
         }
     }
 ?>

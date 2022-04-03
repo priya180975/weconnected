@@ -15,7 +15,7 @@ submit.onclick = ()=>{
       if(xhr.status === 200){
         let data = xhr.response;
         data=data.trim();
-        if((data=="success")||(data="successsuccess"))
+        if((data==""))
         {          
           error.style.color = 'green';
           error.textContent="update successful";
@@ -23,7 +23,7 @@ submit.onclick = ()=>{
         else
         {
           error.style.color = 'red';
-          error.textContent = data;
+          error.textContent = "update failed";
         }
       }
     }

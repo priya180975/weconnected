@@ -11,7 +11,7 @@
 
     if(updateProfile($conn,$name,$course,$year,$description,$_SESSION['uid']))
     {
-        echo "success";
+        echo "";
     }
     else
     {
@@ -23,7 +23,7 @@
     {
         if(updateImage($conn,$_FILES['image'],$_SESSION['uid']))
         {
-            echo "success";
+            echo "";
         }
         else
         {
