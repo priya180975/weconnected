@@ -1,5 +1,5 @@
 #content-all{
-     grid-column: 1/4 !important;
+    grid-column: 1/4 !important;
 }
 
 
@@ -65,4 +65,41 @@ main #committee{
         cursor: pointer;
     }
 
+}
+
+@media(max-width:950px)
+{
+    main{
+        #committee{
+            .all-committee{
+                grid-template-columns: repeat(4, 22%);
+            }
+        }
+    }
+}
+
+@media(max-width:800px)
+{
+    main{
+        #committee{
+            display: block;
+            .all-committee{
+                grid-template-columns: repeat(2, 45%);
+                justify-content: space-around;
+            }
+        }
+    }
+}
+
+
+@media(max-width:550px)
+{
+    main{
+        #committee{
+            display: block;
+            .all-committee{
+                grid-template-columns: 1fr;
+            }
+        }
+    }
 }

@@ -69,4 +69,33 @@ main #committee .all-committee {
   margin-bottom: 1rem;
   cursor: pointer;
 }
+
+@media (max-width: 950px) {
+  main #committee .all-committee {
+    -ms-grid-columns: (22%)[4];
+        grid-template-columns: repeat(4, 22%);
+  }
+}
+
+@media (max-width: 800px) {
+  main #committee {
+    display: block;
+  }
+  main #committee .all-committee {
+    -ms-grid-columns: (45%)[2];
+        grid-template-columns: repeat(2, 45%);
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+}
+
+@media (max-width: 550px) {
+  main #committee {
+    display: block;
+  }
+  main #committee .all-committee {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+}
 /*# sourceMappingURL=committee.css.map */
