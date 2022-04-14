@@ -13,7 +13,6 @@
 </head>
 <body>
     <div id="container">
-       
         <!--nav bar-->
         <?php include_once 'navbar.php'; ?>
             
@@ -54,6 +53,7 @@
     <script src="../javascript/saved.js"></script>
     <script src="../javascript/displaycomment.js"></script>
     <script src="../javascript/comment.js"></script>
+    <script src="../javascript/navbar.js"></script>
     
 </body>
 </html>

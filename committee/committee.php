@@ -52,5 +52,6 @@
         </main>
     </div>
     <script src="../javascript/committee.js"></script>
+    <script src="../javascript/navbar.js"></script>
 </body>
 </html>

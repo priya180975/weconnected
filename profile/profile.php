@@ -93,5 +93,6 @@
     </div>
 
     <script src="../javascript/profile.js"></script>
+    <script src="../javascript/navbar.js"></script>
 </body>
 </html>

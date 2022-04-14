@@ -52,6 +52,7 @@
     <script src="../javascript/main.js"></script>
     <script src="../javascript/saved.js"></script>
     <script src="../javascript/comment.js"></script>
+    <script src="../javascript/navbar.js"></script>
 
 </body>
 </html>
