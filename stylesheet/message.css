@@ -14,12 +14,6 @@ main a {
   color: black;
 }
 
-@media (min-width: 800px) {
-  .main {
-    padding: 0rem  !important;
-  }
-}
-
 #container input {
   width: 100%;
   font-family: 'Spartan', sans-serif;
@@ -263,5 +257,59 @@ main a {
   border-radius: 50%;
   background: #7bda97;
   border: 1px solid #40aa3c;
+}
+
+@media (max-width: 700px) {
+  main {
+    -ms-grid-columns: 30% 65%;
+        grid-template-columns: 30% 65%;
+    display: -ms-grid;
+    display: grid;
+  }
+  main #search-users #search-result .search-data {
+    font-size: 0.6rem  !important;
+  }
+  main #search-users #search-result .search-data img {
+    width: 25px !important;
+    height: 25px !important;
+  }
+}
+
+@media (min-width: 800px) {
+  .main {
+    padding: 0rem  !important;
+  }
+}
+
+@media (max-width: 800px) {
+  main {
+    display: -ms-grid;
+    display: grid;
+  }
+  main #search-users #search-result .search-data {
+    font-size: 0.7rem;
+  }
+  main #search-users #search-result .search-data img {
+    width: 30px;
+    height: 30px;
+  }
+  main #search-users #search-result .search-data .font-small {
+    font-size: 0.5rem;
+  }
+  main #chat-window .userheading .flex-userheading {
+    font-size: 0.7rem;
+  }
+  main #chat-window .userheading .flex-userheading img {
+    width: 30px;
+    height: 30px;
+  }
+  main #chat-window #chat-display .messages .message-content {
+    font-size: 0.7rem;
+    padding: 0.1rem 0rem;
+  }
+  main #chat-window #chat-display .messages .message-content img {
+    width: 25px;
+    height: 25px;
+  }
 }
 /*# sourceMappingURL=message.css.map */
