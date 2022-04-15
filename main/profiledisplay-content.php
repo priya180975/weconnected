@@ -10,7 +10,7 @@ echo '
 
     <div class="course-student">
         <!--usertype description-->                         
-        <div style="text-align:center">'.getUserType($conn,$_SESSION['uid']).'</div>
+        <div style="text-align:center;color:grey">'.getUserType($conn,$_SESSION['uid']).'</div>
         <div class="proDesc">'.getUserDescription($conn,$_SESSION['uid']).'</div>
     </div>
 </div>';

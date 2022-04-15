@@ -30,9 +30,9 @@ echo'
             <select id="select-tag" name="select-tag">';
 
                 //topics
-                    $topics=getTopicTags($conn);
-                        
-                    foreach($topics as $key => $topicname)
+                    //$topics=getTopicTags($conn);
+                      $topics=['it-css','committee','random','bcom'];  
+                    foreach($topics as $topicname)
                     {
                        echo "<option>".$topicname."</option>";
                     }

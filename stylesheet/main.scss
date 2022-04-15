@@ -16,6 +16,7 @@ $grey-very-light: #f8f8fb;
 body {
   font-family: "Spartan", sans-serif;
   background: $grey-very-light;
+  
   .btn {
     background: none;
     border: none;
@@ -175,7 +176,7 @@ main {
           width: auto;
           margin-top: 0.5rem;
           .proDesc {
-            padding: 1rem 1rem 0rem;
+            padding: 0.8rem 1rem;
             // white-space: pre-wrap;
             word-break: break-word;
             text-align: center;
@@ -651,7 +652,7 @@ main {
               font-size: 0.7rem;
               margin-right: 2rem;
               white-space: pre-wrap;
-              word-break: break-all;
+              word-break: break-word;
               word-wrap: normal;
             }
           }
